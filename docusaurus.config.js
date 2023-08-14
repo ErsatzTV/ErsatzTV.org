@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'ErsatzTV',
-  tagline: 'Your personal IPTV server',
+  tagline: 'Your Personal IPTV Server',
   favicon: 'images/favicon-32x32.png',
   url: 'https://ersatztv.org',
   // Set the /<baseUrl>/ pathname under which your site is served
