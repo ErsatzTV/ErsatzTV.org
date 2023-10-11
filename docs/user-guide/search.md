@@ -28,9 +28,11 @@ The following fields are available for searching movies:
 - `library_name`: The name of the library that contains the movie
 - `content_rating`: The movie content rating (case-sensitive) 
 - `language`: The movie audio stream language
+- `language_tag`: The movie audio stream language tag
 - `release_date`: The movie release date (YYYYMMDD)
 - `added_date`: The date the movie was added to ErsatzTV (YYYYMMDD)
 - `minutes`: The rounded-up whole number duration of the movie in minutes
+- `seconds`: The rounded-up whole number duration of the movie in seconds
 - `height`: The movie height
 - `width`: The movie width
 - `video_codec`: The video codec
@@ -51,6 +53,7 @@ The following fields are available for searching shows:
 - `library_name`: The name of the library that contains the show
 - `content_rating`: The show content rating (case-sensitive)
 - `language`: The show audio stream language
+- `language_tag`: The show audio stream language tag
 - `release_date`: The show release date (YYYYMMDD)
 - `added_date`: The date the show was added to ErsatzTV (YYYYMMDD)
 - `type`: Always `show`
@@ -77,9 +80,11 @@ The following fields are available for searching episodes:
 - `writer`: A writer from the episode
 - `library_name`: The name of the library that contains the episode
 - `language`: The episode audio stream language
+- `language_tag`: The episode audio stream language tag
 - `release_date`: The episode release date (YYYYMMDD)
 - `added_date`: The date the episode was added to ErsatzTV (YYYYMMDD)
 - `minutes`: The rounded-up whole number duration of the episode in minutes
+- `seconds`: The rounded-up whole number duration of the episode in seconds
 - `height`: The episode height
 - `width`: The episode width
 - `season_number`: The episode season number
@@ -114,9 +119,11 @@ The following fields are available for searching music videos:
 - `genre`: The music video genre
 - `library_name`: The name of the library that contains the music video
 - `language`: The music video audio stream language
+- `language_tag`: The music video audio stream language tag
 - `release_date`: The music video release date (YYYYMMDD)
 - `added_date`: The date the music video was added to ErsatzTV (YYYYMMDD)
 - `minutes`: The rounded-up whole number duration of the music video in minutes
+- `seconds`: The rounded-up whole number duration of the music video in seconds
 - `height`: The music video height
 - `width`: The music video width
 - `video_codec`: The video codec
@@ -139,9 +146,11 @@ The following fields are available for searching other videos:
 - `library_name`: The name of the library that contains the video
 - `content_rating`: The video content rating (case-sensitive)
 - `language`: The video audio stream language
+- `language_tag`: The video audio stream language tag
 - `release_date`: The video release date (YYYYMMDD)
 - `added_date`: The date the video was added to ErsatzTV (YYYYMMDD)
 - `minutes`: The rounded-up whole number duration of the video in minutes
+- `seconds`: The rounded-up whole number duration of the video in seconds
 - `height`: The video height
 - `width`: The video width
 - `video_codec`: The video codec
@@ -160,6 +169,7 @@ The following fields are available for searching songs:
 - `genre`: The song genre
 - `tag`: All of the song's parent folders
 - `minutes`: the rounded-up whole number duration of the song in minutes
+- `seconds`: the rounded-up whole number duration of the song in seconds
 - `added_date`: The date the song was added to ErsatzTV (YYYYMMDD)
 - `type`: Always `song`
 
