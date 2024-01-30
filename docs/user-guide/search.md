@@ -67,6 +67,7 @@ The following fields are available for searching seasons:
 - `season_number`: The season number
 - `show_title`: The title of the show that contains the season
 - `show_genre`: The genre of the show that contains the season
+- `show_studio`: The studio of the show that contains the season
 - `show_tag`: The tag of the show that contains the season
 - `type`: Always `season`
 
@@ -91,6 +92,7 @@ The following fields are available for searching episodes:
 - `episode_number`: The episode number
 - `show_title`: The title of the show that contains the episode
 - `show_genre`: The genre of the show that contains the episode
+- `show_studio`: The studio of the show that contains the episode
 - `show_tag`: The tag of the show that contains the episode
 - `video_codec`: The video codec
 - `video_bit_depth`: The number of bits in the episode's pixel format
