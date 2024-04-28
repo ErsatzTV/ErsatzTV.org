@@ -54,7 +54,7 @@ docker run -d \
   jasongdove/ersatztv
 ```
 
-4\. To limit the writing to a ssd drive you can add a Temporary File System by adddin this line to you docker container before the line contain `jasongdove/ersatztv`
+4\. To limit the writing to an SSD drive you can add a Temporary File System by adding this line to your docker container before the line `jasongdove/ersatztv`
 
 ```
   --mount type=tmpfs,destination=/root/.local/share/etv-transcode \
