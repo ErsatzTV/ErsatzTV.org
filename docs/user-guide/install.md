@@ -54,6 +54,12 @@ docker run -d \
   jasongdove/ersatztv
 ```
 
+4\. To limit the writing to an SSD drive you can add a Temporary File System by adding this line to your docker container before the line `jasongdove/ersatztv`
+
+```
+  --mount type=tmpfs,destination=/root/.local/share/etv-transcode \
+```
+
 ### Unraid Docker
 
 1. Install the Commuinity Applications plugin by pasting the following URL in the Plugins / Install Plugin section of UnRAID  
