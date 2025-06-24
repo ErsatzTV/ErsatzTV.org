@@ -9,30 +9,24 @@ ErsatzTV is available as Docker images and as pre-built binary packages for Wind
 
 <a href="https://hub.docker.com/r/jasongdove/ersatztv"><img alt="Docker Pull Count" src="https://img.shields.io/docker/pulls/jasongdove/ersatztv" /></a>
 
-### Latest Release Tags
+### Latest Release
 
-Base (software transcoding): `jasongdove/ersatztv:latest`
+- `jasongdove/ersatztv:latest`
+- `ghcr.io/ersatztv/ersatztv:latest`
 
-Nvidia hardware-accelerated transcoding: `jasongdove/ersatztv:latest-nvidia`
+### Development Release
 
-VAAPI (Intel, AMD) hardware-accelerated transcoding: `jasongdove/ersatztv:latest-vaapi`
+Development releases update much more frequently, but have the potential to be less stable than full releases. 
 
-### Development Tags
-
-Development tags update much more frequently, but have the potential to be less stable than releases. 
-
-Base (software transcoding): `jasongdove/ersatztv:develop`
-
-Nvidia hardware-accelerated transcoding: `jasongdove/ersatztv:develop-nvidia`
-
-VAAPI (Intel, AMD) hardware-accelerated transcoding: `jasongdove/ersatztv:develop-vaapi`
+- `jasongdove/ersatztv:develop`
+- `ghcr.io/ersatztv/ersatztv:develop`
 
 ### Docker
 
 1\. Download the latest container image
 
 ```
-docker pull jasongdove/ersatztv
+docker pull ghcr.io/ersatztv/ersatztv
 ```
 
 2\. Create a directory to store configuration data
@@ -48,16 +42,16 @@ docker run -d \
   --name ersatztv \
   -e TZ=America/Chicago \
   -p 8409:8409 \
-  -v /path/to/config:/root/.local/share/ersatztv \
+  -v /path/to/config:/config \
   -v /path/to/local/media:/path/to/local/media:ro \
   --restart unless-stopped \
-  jasongdove/ersatztv
+  ghcr.io/ersatztv/ersatztv
 ```
 
-4\. To limit the writing to an SSD drive you can add a Temporary File System by adding this line to your docker container before the line `jasongdove/ersatztv`
+4\. To limit the writing to an SSD drive you can add a Temporary File System by adding this line to your docker container before the line `ghcr.io/ersatztv/ersatztv`
 
 ```
-  --mount type=tmpfs,destination=/root/.local/share/etv-transcode \
+  --mount type=tmpfs,destination=/transcode \
 ```
 
 ### Unraid Docker
@@ -77,7 +71,7 @@ docker run -d \
 3. Choose an appropriate branch (Use `vaapi` for video acceleration for AMD GPUs and Intel CPUs with QuickSync, use `nvidia` for video acceleration for nVidia GPUs)
 
     ![ErsatzTV Docker branches](/images/docs/unraid-docker-ersatz-branches.png)
-    `VAAPI` and `nVidia` branches are for hardware acceleration. See [latest release tags](install.md#latest-release-tags)
+    `VAAPI` and `nVidia` branches are for hardware acceleration. See [latest release tags](install.md#latest-release)
 
 4. Map your path to ErsatzTV configuration data
 
