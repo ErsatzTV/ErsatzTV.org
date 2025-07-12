@@ -20,6 +20,8 @@ The following fields are available for searching movies:
 - `title`: The movie title
 - `genre`: The movie genre
 - `tag`: The movie tag (not available with Plex metadata)
+- `tag_full`: same as `tag`, but not tokenized or analyzed
+- `collection`: The name of the collection that contains the movie
 - `plot`: The movie plot
 - `studio`: The movie studio
 - `actor`: An actor from the movie
@@ -29,6 +31,8 @@ The following fields are available for searching movies:
 - `content_rating`: The movie content rating (case-sensitive) 
 - `language`: The movie audio stream language
 - `language_tag`: The movie audio stream language tag
+- `sub_language`: The movie subtitle stream language
+- `sub_language_tag`: The movie subtitle stream language tag
 - `release_date`: The movie release date (YYYYMMDD)
 - `added_date`: The date the movie was added to ErsatzTV (YYYYMMDD)
 - `minutes`: The rounded-up whole number duration of the movie in minutes
@@ -47,13 +51,18 @@ The following fields are available for searching shows:
 - `title`: The show title
 - `genre`: The show genre
 - `tag`: The show tag (not available with Plex metadata)
+- `tag_full`: same as `tag`, but not tokenized or analyzed
+- `collection`: The name of the collection that contains the show
 - `plot`: The show plot
 - `studio`: The show studio
+- `network`: Plex's "network" metadata for the show
 - `actor`: An actor from the show
 - `library_name`: The name of the library that contains the show
 - `content_rating`: The show content rating (case-sensitive)
 - `language`: The show audio stream language
 - `language_tag`: The show audio stream language tag
+- `sub_language`: The show subtitle stream language
+- `sub_language_tag`: The show subtitle stream language tag
 - `release_date`: The show release date (YYYYMMDD)
 - `added_date`: The date the show was added to ErsatzTV (YYYYMMDD)
 - `type`: Always `show`
@@ -63,11 +72,19 @@ The following fields are available for searching shows:
 The following fields are available for searching seasons:
 
 - `title`: The season title
+- `tag`: The season tag (not available with Plex metadata)
+- `tag_full`: same as `tag`, but not tokenized or analyzed
+- `collection`: The name of the collection that contains the season
 - `library_name`: The name of the library that contains the season
 - `season_number`: The season number
+- `language`: The season audio stream language
+- `language_tag`: The season audio stream language tag
+- `sub_language`: The season subtitle stream language
+- `sub_language_tag`: The season subtitle stream language tag
 - `show_title`: The title of the show that contains the season
 - `show_genre`: The genre of the show that contains the season
 - `show_studio`: The studio of the show that contains the season
+- `show_content_rating`: The content rating of the show that contains the season
 - `show_tag`: The tag of the show that contains the season
 - `type`: Always `season`
 
@@ -79,9 +96,14 @@ The following fields are available for searching episodes:
 - `plot`: The episode plot
 - `director`: A director from the episode
 - `writer`: A writer from the episode
+- `tag`: The episode tag (not available with Plex metadata)
+- `tag_full`: same as `tag`, but not tokenized or analyzed
+- `collection`: The name of the collection that contains the episode
 - `library_name`: The name of the library that contains the episode
 - `language`: The episode audio stream language
 - `language_tag`: The episode audio stream language tag
+- `sub_language`: The episode subtitle stream language
+- `sub_language_tag`: The episode subtitle stream language tag
 - `release_date`: The episode release date (YYYYMMDD)
 - `added_date`: The date the episode was added to ErsatzTV (YYYYMMDD)
 - `minutes`: The rounded-up whole number duration of the episode in minutes
@@ -93,6 +115,8 @@ The following fields are available for searching episodes:
 - `show_title`: The title of the show that contains the episode
 - `show_genre`: The genre of the show that contains the episode
 - `show_studio`: The studio of the show that contains the episode
+- `show_network`: Plex's "network" metadata for the show that contains the episode
+- `show_content_rating`: The content rating of the show that contains the episode
 - `show_tag`: The tag of the show that contains the episode
 - `video_codec`: The video codec
 - `video_bit_depth`: The number of bits in the episode's pixel format
@@ -107,6 +131,11 @@ The following fields are available for searching artists:
 - `genre`: The artist genre
 - `style`: The artist style
 - `mood`: The artist mood
+- `language`: The artist audio stream language
+- `language_tag`: The artist audio stream language tag
+- `sub_language`: The artist subtitle stream language
+- `sub_language_tag`: The artist subtitle stream language tag
+- `collection`: The name of the collection that contains the artist
 - `added_date`: The date the artist was added to ErsatzTV (YYYYMMDD)
 - `library_name`: The name of the library that contains the artist
 - `type`: Always `artist`
@@ -119,9 +148,14 @@ The following fields are available for searching music videos:
 - `artist`: The music video artist
 - `album`: The music video album
 - `genre`: The music video genre
+- `tag`: The music video tag
+- `tag_full`: same as `tag`, but not tokenized or analyzed
+- `collection`: The name of the collection that contains the music video
 - `library_name`: The name of the library that contains the music video
 - `language`: The music video audio stream language
 - `language_tag`: The music video audio stream language tag
+- `sub_language`: The music video subtitle stream language
+- `sub_language_tag`: The music video subtitle stream language tag
 - `release_date`: The music video release date (YYYYMMDD)
 - `added_date`: The date the music video was added to ErsatzTV (YYYYMMDD)
 - `minutes`: The rounded-up whole number duration of the music video in minutes
@@ -140,6 +174,8 @@ The following fields are available for searching other videos:
 - `title`: The NFO title or the filename of the video (without extension)
 - `genre`: The video genre
 - `tag`: The video tag
+- `tag_full`: same as `tag`, but not tokenized or analyzed
+- `collection`: The name of the collection that contains the video
 - `plot`: The video plot
 - `studio`: The video studio
 - `actor`: An actor from the video
@@ -149,6 +185,8 @@ The following fields are available for searching other videos:
 - `content_rating`: The video content rating (case-sensitive)
 - `language`: The video audio stream language
 - `language_tag`: The video audio stream language tag
+- `sub_language`: The video subtitle stream language
+- `sub_language_tag`: The video subtitle stream language tag
 - `release_date`: The video release date (YYYYMMDD)
 - `added_date`: The date the video was added to ErsatzTV (YYYYMMDD)
 - `minutes`: The rounded-up whole number duration of the video in minutes
@@ -170,10 +208,26 @@ The following fields are available for searching songs:
 - `album_artist`: The album artist
 - `genre`: The song genre
 - `tag`: All of the song's parent folders
+- `tag_full`: same as `tag`, but not tokenized or analyzed
+- `collection`: The name of the collection that contains the song
+- `library_name`: The name of the library that contains the song
 - `minutes`: the rounded-up whole number duration of the song in minutes
 - `seconds`: the rounded-up whole number duration of the song in seconds
 - `added_date`: The date the song was added to ErsatzTV (YYYYMMDD)
 - `type`: Always `song`
+
+### Images
+
+The following fields are available for searching images:
+
+- `title`: The image title, or the filename of the image (without extension)
+- `genre`: The image genre
+- `tag`: All of the image's parent folders
+- `tag_full`: same as `tag`, but not tokenized or analyzed
+- `collection`: The name of the collection that contains the image
+- `library_name`: The name of the library that contains the image
+- `added_date`: The date the image was added to ErsatzTV (YYYYMMDD)
+- `type`: Always `image`
 
 ## Special Search Fields
 
