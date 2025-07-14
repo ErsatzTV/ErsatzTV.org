@@ -100,7 +100,7 @@ const config = {
           },
           {
             label: 'Discord',
-            to: 'https://chat.ersatztv.org',
+            to: 'https://discord.ersatztv.org',
           },
           {
             label: 'GitHub',
