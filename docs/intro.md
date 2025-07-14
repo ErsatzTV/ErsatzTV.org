@@ -8,7 +8,7 @@ sidebar_position: 1
 
 **ErsatzTV** is beta software for configuring and streaming custom live channels using your media library. The software may be unstable and is under active development.
 
-Want to join the community or have a question? Join us on [Discord](https://chat.ersatztv.org).
+Want to join the community or have a question? Join us on [Discord](https://discord.ersatztv.org).
 
 Want to say thanks? Consider [sponsorship on GitHub](https://github.com/sponsors/jasongdove) or [one-time donations on PayPal](https://www.paypal.me/jasongdove).
 
