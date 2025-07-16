@@ -5,6 +5,8 @@ title: Install ErsatzTV
 
 ErsatzTV is available as Docker images and as pre-built binary packages for Windows (x64), MacOS (x64, arm64) and Linux (x64, arm64, arm). 
 
+ErsatzTV depends on an up-to-date version of FFmpeg and FFprobe. Docker images and Windows packages are bundled with all required dependencies, including FFmpeg. For all other releases, a compatible version of FFmpeg may be found at [ErsatzTV-FFmpeg](https://github.com/ErsatzTV/ErsatzTV-ffmpeg/releases/tag/7.1.1).
+
 ## Docker Images
 
 <a href="https://hub.docker.com/r/jasongdove/ersatztv"><img alt="Docker Pull Count" src="https://img.shields.io/docker/pulls/jasongdove/ersatztv" /></a>
