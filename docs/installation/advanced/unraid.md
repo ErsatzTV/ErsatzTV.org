@@ -21,7 +21,7 @@ sidebar_position: 1
 3. Choose an appropriate branch (Use `vaapi` for video acceleration for AMD GPUs and Intel CPUs with QuickSync, use `nvidia` for video acceleration for nVidia GPUs)
 
     ![ErsatzTV Docker branches](/images/docs/unraid-docker-ersatz-branches.png)
-    `VAAPI` and `nVidia` branches are for hardware acceleration. See [latest release tags](install.md#latest-release)
+    `VAAPI` and `nVidia` branches are for hardware acceleration. See [latest release tags](/docs/installation/docker#latest-release)
 
 4. Map your path to ErsatzTV configuration data
 
