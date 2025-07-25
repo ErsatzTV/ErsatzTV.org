@@ -28,6 +28,3 @@ Your images library will then have two media items with the following metadata:
 
 1. title: `Stream One`, tags: `One`, `Two`, `Three`
 2. title: `Stream Two`, tags: `One`, `Two`, `Four`
-
-### Remote Stream Definition (YAML)
-

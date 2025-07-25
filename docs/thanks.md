@@ -1,7 +1,7 @@
 ﻿---
 uid: thanks
 title: Thanks
-sidebar_position: 9
+sidebar_position: 10
 ---
 
 [<img src="/images/docs/bugsnag.svg" alt="Bugsnag" width="256"/>](https://www.bugsnag.com)
