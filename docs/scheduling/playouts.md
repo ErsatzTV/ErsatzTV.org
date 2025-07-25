@@ -2,6 +2,7 @@
 uid: scheduling-playouts
 title: Playouts
 sidebar_position: 3
+hide_table_of_contents: true
 ---
 
 Playouts assign a schedule to a channel and individually track the ordered playback of collection items.
