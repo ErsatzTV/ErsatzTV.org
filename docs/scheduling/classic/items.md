@@ -1,6 +1,7 @@
 ---
 uid: scheduling-classic-items
 title: Schedule Items
+sidebar_position: 1
 ---
 
 ## Start Type

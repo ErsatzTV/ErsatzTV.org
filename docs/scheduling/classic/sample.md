@@ -1,6 +1,7 @@
 ---
 uid: scheduling-classic-sample
 title: Sample Schedules
+sidebar_position: 2
 ---
 
 ## 24/7 Show
