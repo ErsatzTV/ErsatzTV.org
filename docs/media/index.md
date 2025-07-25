@@ -12,5 +12,5 @@ Four library kinds are currently supported: [Local](#local-libraries), [Plex](#p
 - [Jellyfin Libraries](/docs/media/jellyfin)
 - [Emby Libraries](/docs/media/emby)
 
-ErsatzTV supports a subset of media kinds when synchronizing from media servers, i.e. [Plex](#plex-libraries), [Jellyfin](#jellyfin-libraries) and [Emby](#emby-libraries) only support `Movies` and `Shows`.
-[Local Libraries](#local-libraries) support all media kinds: `Movies`, `Shows`, `Music Videos`, `Other Videos` and `Songs`.
+ErsatzTV supports a subset of media kinds when synchronizing from media servers, i.e. [Plex](#plex-libraries), [Jellyfin](#jellyfin-libraries) and [Emby](#emby-libraries) only support **Movies** and **Shows**.
+[Local Libraries](#local-libraries) support all media kinds: **Movies**, **Shows**, **Music Videos**, **Other Videos**, **Songs**, **Images** and **Remote Streams**.
