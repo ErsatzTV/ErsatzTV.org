@@ -1,5 +1,5 @@
 ﻿---
-uid: user-guide-search
+uid: search-index
 title: Search
 ---
 
@@ -35,6 +35,7 @@ The following fields are available for searching movies:
 - `sub_language_tag`: The movie subtitle stream language tag
 - `release_date`: The movie release date (YYYYMMDD)
 - `added_date`: The date the movie was added to ErsatzTV (YYYYMMDD)
+- `chapters`: The number of chapters in the movie
 - `minutes`: The rounded-up whole number duration of the movie in minutes
 - `seconds`: The rounded-up whole number duration of the movie in seconds
 - `height`: The movie height
@@ -106,6 +107,7 @@ The following fields are available for searching episodes:
 - `sub_language_tag`: The episode subtitle stream language tag
 - `release_date`: The episode release date (YYYYMMDD)
 - `added_date`: The date the episode was added to ErsatzTV (YYYYMMDD)
+- `chapters`: The number of chapters in the episode
 - `minutes`: The rounded-up whole number duration of the episode in minutes
 - `seconds`: The rounded-up whole number duration of the episode in seconds
 - `height`: The episode height
@@ -158,6 +160,7 @@ The following fields are available for searching music videos:
 - `sub_language_tag`: The music video subtitle stream language tag
 - `release_date`: The music video release date (YYYYMMDD)
 - `added_date`: The date the music video was added to ErsatzTV (YYYYMMDD)
+- `chapters`: The number of chapters in the music video
 - `minutes`: The rounded-up whole number duration of the music video in minutes
 - `seconds`: The rounded-up whole number duration of the music video in seconds
 - `height`: The music video height
@@ -189,6 +192,7 @@ The following fields are available for searching other videos:
 - `sub_language_tag`: The video subtitle stream language tag
 - `release_date`: The video release date (YYYYMMDD)
 - `added_date`: The date the video was added to ErsatzTV (YYYYMMDD)
+- `chapters`: The number of chapters in the video
 - `minutes`: The rounded-up whole number duration of the video in minutes
 - `seconds`: The rounded-up whole number duration of the video in seconds
 - `height`: The video height
@@ -236,37 +240,3 @@ The following fields are available for searching images:
 - `released_onthisday`: For any media type that supports `release_date`, `released_onthisday` takes any value (ignored) and will return items released on this month number and day number in previous years
 - `added_inthelast`: For any media type that supports `added_date`, `added_inthelast` takes a number and a unit (days, weeks, months, years) and returns items added to ErsatzTV between the specified time ago and now
 - `added_notinthelast`: For any media type that supports `added_date`, `added_notinthelast` takes a number and a unit (days, weeks, months, years) and returns items added to ErsatzTV before the specified time ago
-
-## Sample Searches
-
-### Christmas
-
-`plot:christmas`
-
-### Christmas without Horror
-
-`plot:christmas NOT genre:horror`
-
-### 1970's Movies
-
-`type:movie AND release_date:197*`
-
-### 1970's-1980's Comedies
-
-`genre:comedy AND (release_date:197* OR release_date:198*)`
-
-### Lush Music (Artists)
-
-`mood:lush`
-
-### Episodes from the past week
-
-`type:episode AND released_inthelast:"1 week"`
-
-### Episodes older than the past week
-
-`type:episode AND released_notinthelast:"1 week"`
-
-### Episodes released on this day
-
-`type:episode AND released_onthisday:1`

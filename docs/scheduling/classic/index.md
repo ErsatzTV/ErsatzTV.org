@@ -1,44 +1,7 @@
-﻿---
-uid: user-guide-create-channels
-title: Create Channels
 ---
-
-## Create Channel
-
-Create a Channel by navigating to the `Channels` page and clicking `Add Channel`.
-
-### Channel Number
-
-Channel numbers can be whole numbers or can contain one decimal, like `500` or `500.5`.
-
-### Streaming Mode
-
-Four streaming modes are currently supported. Ideally one of the two primary streaming modes should be used; secondary streaming modes are only needed in some edge cases.
-
-#### Primary Streaming Modes
-
-The two primary streaming modes are `HLS Segmenter` (HTTP Live Streaming Segmenter) and `MPEG-TS` (Transport Stream).
-
-* `HLS Segmenter` transcodes content, supports watermarks and offers the best performance at program boundaries
-* `MPEG-TS` is a light wrapper over the `HLS Segmenter` streaming mode and provides support for clients that require an HDHomeRun tuner
-
-#### Secondary Streaming Modes
-
-The two secondary streaming modes are `HLS Direct` (HTTP Live Streaming Direct) and `MPEG-TS (Legacy)` (Legacy Transport Stream).
-
-* `HLS Direct` does not transcode content and can perform better on low power systems, but does not support watermarks and some clients will have issues at program boundaries
-* `MPEG-TS (Legacy)` transcodes content and supports watermarks, though some clients will have issues at program boundaries. This mode will be removed with a future release.
-
-### FFmpeg Profile
-
-FFmpeg Profiles are collections of transcoding settings that are applied to all content on a channel.
-The default FFmpeg Profile is probably "good enough" for initial testing.
-
-### Logo
-
-Channel logos can be added using the `Upload Logo` button and the logos will display in most client program guides.
-
-## Create Schedule
+uid: scheduling-classic-index
+title: Classic Schedules
+---
 
 Schedules are used to control the playback order of media items on a channel.
 Create a Schedule by navigating to the `Schedules` page, clicking `Add Schedule` and giving your schedule a name, and selecting the appropriate settings:
@@ -48,7 +11,7 @@ Create a Schedule by navigating to the `Schedules` page, clicking `Add Schedule`
 * `Shuffle Schedule Items`: This shuffles the order of schedule items when building a playout, and is mostly used on channels with a mix of shows that require unique schedule item settings per show. Note that this disables fixed start times and flood mode.
 * `Random Start Point`: This starts each schedule item at a random place within the collection.
 
-### Schedule Items
+## Schedule Items
 
 Schedules contain an ordered list of items (collections), and will play back one or more items from each collection before advancing to the next schedule item.
 
@@ -58,11 +21,11 @@ Edit the new schedule's items by clicking the `Edit Schedule Items` button for t
 
 Add a new item to the schedule by clicking `Add Schedule Item` and configure as desired.
 
-#### Start Type
+### Start Type
 
 Items with a `Dynamic` start type will start immediately after the preceding schedule item, while a `Fixed` start type requires a start time.
 
-#### Collection Type
+### Collection Type
 
 Schedule items can contain the following collection types:
 
@@ -73,11 +36,11 @@ Schedule items can contain the following collection types:
 - `Multi Collection`: Select all collections within a multi-collection.
 - `Smart Collection`: Select all items that match a saved search query.
 
-#### Collection
+### Collection
 
 Based on the selected collection type, select the desired collection.
 
-#### Playback Order
+### Playback Order
 
 Select the desired playback order for media items within the selected collection:
 
@@ -86,7 +49,7 @@ Select the desired playback order for media items within the selected collection
 - `Shuffle`: Items are randomly ordered and no item will be played a second time until every item from the collection has been played once.
 - `Shuffle In Order`: Items are grouped (episodes by show, music videos by artist, one group for all movies), the group contents are sorted chronologically, and the groups are shuffled together while maintaining their individual chronological ordering.
 
-#### Playout Mode
+### Playout Mode
 
 Select how you want this schedule item to behave every time it is selected for playback.
 
@@ -97,7 +60,7 @@ Select how you want this schedule item to behave every time it is selected for p
 
 Click `Save Changes` to save all changes made to the schedule's items.
 
-#### Tail Mode (Duration)
+### Tail Mode (Duration)
 
 Select how you want this duration schedule item to behave when no more complete media items will fit in the specified `Playout Duration`:
 
@@ -105,16 +68,9 @@ Select how you want this duration schedule item to behave when no more complete 
 - `Offline`: Show the ETV offline image for the remainder of the `Playout Duration`
 - `Filler`: Fill the remainder of the `Playout Duration` with the specified collection, followed by the ETV offline image if needed
 
-#### Guide Mode
+### Guide Mode
 
 Select how you want this schedule item to behave in the channel guide:
 
 - `Normal`: show all scheduled items in the channel guide
 - `Filler`: hide all scheduled items from the channel guide, and extend the end time for the previous item in the guide
-
-## Create Playout
-
-Playouts assign a schedule to a channel and individually track the ordered playback of collection items.
-If a schedule is used in multiple playouts (channels), the channels may not have the same content playing at the same time.
-
-To create a Playout, navigate to the `Playouts` page and click the `Add Playout` button. Then, select the appropriate channel and schedule, and click `Add Playout` to save.

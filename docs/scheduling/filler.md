@@ -1,6 +1,7 @@
-﻿---
-uid: user-guide-filler
+---
+uid: scheduling-filler
 title: Filler
+sidebar_position: 2
 ---
 
 Filler is content that is used to fill otherwise unscheduled gaps, and to pad primary content to a desired time.

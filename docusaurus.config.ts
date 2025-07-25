@@ -1,48 +1,34 @@
-// @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
+import {themes as prismThemes} from 'prism-react-renderer';
+import { Config } from '@docusaurus/types';
+import type * as Preset from '@docusaurus/preset-classic';
+import * as ClientRedirects from '@docusaurus/plugin-client-redirects';
+import * as Docs from '@docusaurus/plugin-content-docs';
 
-const {themes} = require('prism-react-renderer')
-const lightCodeTheme = themes.github;
-const darkCodeTheme = themes.dracula;
-
-/** @type {import('@docusaurus/types').Config} */
-const config = {
+const config: Config = {
   title: 'ErsatzTV',
   tagline: 'Your Personal IPTV Server',
   favicon: 'images/favicon-32x32.png',
   url: 'https://ersatztv.org',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'ErsatzTV', // Usually your GitHub org/user name.
-  projectName: 'ErsatzTV', // Usually your repo name.
-
+  organizationName: 'ErsatzTV',
+  projectName: 'ErsatzTV',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
   presets: [
     [
       'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      {
         docs: {
-          sidebarPath: require.resolve('./sidebars.js')
+          sidebarPath: './sidebars.ts'
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: './src/css/custom.css',
         },
-      }),
+      } satisfies Preset.Options,
     ],
   ],
 
@@ -63,8 +49,7 @@ const config = {
   ],
 
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
+    {
       // Replace with your project's social card
       image: 'images/docusaurus-social-card.jpg',
       colorMode: {
@@ -80,7 +65,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'index',
             position: 'right',
             label: 'Documentation',
           },
@@ -96,7 +81,7 @@ const config = {
         links: [
           {
             label: 'Documentation',
-            to: '/docs/intro',
+            to: '/docs',
           },
           {
             label: 'Discord',
@@ -118,10 +103,44 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Jason Dove`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: prismThemes.github,
+        darkTheme: prismThemes.dracula,
       },
-    }),
+    } satisfies Preset.ThemeConfig,
+
+    plugins: [
+      [
+        '@docusaurus/plugin-client-redirects',
+        {
+          redirects: [
+            {
+              from: '/docs/intro',
+              to: '/docs'
+            },
+            {
+              from: '/docs/user-guide/install',
+              to: '/docs/installation'
+            },
+            {
+              from: '/docs/user-guide/add-media-items',
+              to: '/docs/media'
+            },
+            {
+              from: '/docs/user-guide/create-collections',
+              to: '/docs/collections'
+            },
+            {
+              from: '/docs/user-guide/create-channels',
+              to: '/docs/channels'
+            },
+            {
+              from: '/docs/user-guide/configure-clients',
+              to: '/docs/clients'
+            }
+          ]
+        } satisfies ClientRedirects.Options
+      ]
+    ]
 };
 
 module.exports = config;
