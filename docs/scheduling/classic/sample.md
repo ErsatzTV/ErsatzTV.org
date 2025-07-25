@@ -1,5 +1,5 @@
-﻿---
-uid: user-guide-sample-schedules
+---
+uid: scheduling-classic-sample
 title: Sample Schedules
 ---
 

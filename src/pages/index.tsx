@@ -1,4 +1,4 @@
-import React from 'react';
+import type {ReactNode} from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -17,7 +17,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
+            to="/docs">
             ErsatzTV Quick Start
           </Link>
         </div>
@@ -26,7 +26,7 @@ function HomepageHeader() {
   );
 }
 
-export default function Home() {
+export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
