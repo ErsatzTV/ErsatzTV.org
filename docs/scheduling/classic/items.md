@@ -49,6 +49,12 @@ Select the desired playback order for media items within the selected collection
 **Shuffle In Order** can only be used with **Collection**, **Smart Collection** and **Multi Collection**
 :::
 
+- **Season, Episode** - Sorts by season number, then by episode number. This can be useful when it is different than release date (chronological) order.
+
+:::note
+**Season, Episode** can only be used with **Television Show**
+:::
+
 ## Playout Mode
 
 Select how you want this schedule item to behave every time it is selected for playback.

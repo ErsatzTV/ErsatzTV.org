@@ -5,7 +5,7 @@ title: Search
 
 ## Search Box
 
-Movies, Shows, Episodes, Artists and Music Videos can be searched using the search box next to the ErsatzTV logo.
+**Movies**, **Shows**, **Episodes**, **Artists**, **Music Videos**, **Other Videos**, **Images** and **Remote Streams** can be searched using the search box next to the ErsatzTV logo.
 
 ![Search Box](/images/docs/search-box.png)
 
@@ -15,8 +15,8 @@ The `title` field of all media types is searched by default if no other field is
 
 ### Movies
 
-The following fields are available for searching movies:
-
+<details>
+  <summary>The following fields are available for searching movies</summary>
 - `title`: The movie title
 - `genre`: The movie genre
 - `tag`: The movie tag (not available with Plex metadata)
@@ -44,11 +44,12 @@ The following fields are available for searching movies:
 - `video_bit_depth`: The number of bits in the movie's pixel format
 - `video_dynamic_range`: The movie's dynamic range (`sdr` or `hdr`)
 - `type`: Always `movie`
+</details>
 
 ### Shows
 
-The following fields are available for searching shows:
-
+<details>
+  <summary>The following fields are available for searching shows</summary>
 - `title`: The show title
 - `genre`: The show genre
 - `tag`: The show tag (not available with Plex metadata)
@@ -67,11 +68,12 @@ The following fields are available for searching shows:
 - `release_date`: The show release date (YYYYMMDD)
 - `added_date`: The date the show was added to ErsatzTV (YYYYMMDD)
 - `type`: Always `show`
+</details>
 
 ### Seasons
 
-The following fields are available for searching seasons:
-
+<details>
+  <summary>The following fields are available for searching seasons</summary>
 - `title`: The season title
 - `tag`: The season tag (not available with Plex metadata)
 - `tag_full`: same as `tag`, but not tokenized or analyzed
@@ -88,11 +90,12 @@ The following fields are available for searching seasons:
 - `show_content_rating`: The content rating of the show that contains the season
 - `show_tag`: The tag of the show that contains the season
 - `type`: Always `season`
+</details>
 
 ### Episodes
 
-The following fields are available for searching episodes:
-
+<details>
+  <summary>The following fields are available for searching episodes</summary>
 - `title`: The episode title
 - `plot`: The episode plot
 - `director`: A director from the episode
@@ -124,11 +127,12 @@ The following fields are available for searching episodes:
 - `video_bit_depth`: The number of bits in the episode's pixel format
 - `video_dynamic_range`: The episode's dynamic range (`sdr` or `hdr`)
 - `type`: Always `episode`
+</details>
 
 ### Artists
 
-The following fields are available for searching artists:
-
+<details>
+  <summary>The following fields are available for searching artists</summary>
 - `title`: The artist name
 - `genre`: The artist genre
 - `style`: The artist style
@@ -141,11 +145,12 @@ The following fields are available for searching artists:
 - `added_date`: The date the artist was added to ErsatzTV (YYYYMMDD)
 - `library_name`: The name of the library that contains the artist
 - `type`: Always `artist`
+</details>
 
 ### Music Videos
 
-The following fields are available for searching music videos:
-
+<details>
+  <summary>The following fields are available for searching music videos</summary>
 - `title`: The music video title
 - `artist`: The music video artist
 - `album`: The music video album
@@ -169,11 +174,12 @@ The following fields are available for searching music videos:
 - `video_bit_depth`: The number of bits in the music video's pixel format
 - `video_dynamic_range`: The music video's dynamic range (`sdr` or `hdr`)
 - `type`: Always `music_video`
+</details>
 
 ### Other Videos
 
-The following fields are available for searching other videos:
-
+<details>
+  <summary>The following fields are available for searching other videos</summary>
 - `title`: The NFO title or the filename of the video (without extension)
 - `genre`: The video genre
 - `tag`: The video tag
@@ -201,11 +207,12 @@ The following fields are available for searching other videos:
 - `video_bit_depth`: The number of bits in the other video's pixel format
 - `video_dynamic_range`: The other video's dynamic range (`sdr` or `hdr`)
 - `type`: Always `other_video`
+</details>
 
 ### Songs
 
-The following fields are available for searching songs:
-
+<details>
+  <summary>The following fields are available for searching songs</summary>
 - `title`: The song title, or the filename of the song (without extension)
 - `album`: The song album
 - `artist`: The song/track artist
@@ -219,11 +226,12 @@ The following fields are available for searching songs:
 - `seconds`: the rounded-up whole number duration of the song in seconds
 - `added_date`: The date the song was added to ErsatzTV (YYYYMMDD)
 - `type`: Always `song`
+</details>
 
 ### Images
 
-The following fields are available for searching images:
-
+<details>
+  <summary>The following fields are available for searching images</summary>
 - `title`: The image title, or the filename of the image (without extension)
 - `genre`: The image genre
 - `tag`: All of the image's parent folders
@@ -232,6 +240,7 @@ The following fields are available for searching images:
 - `library_name`: The name of the library that contains the image
 - `added_date`: The date the image was added to ErsatzTV (YYYYMMDD)
 - `type`: Always `image`
+</details>
 
 ## Special Search Fields
 
