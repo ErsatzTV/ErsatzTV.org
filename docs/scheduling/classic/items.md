@@ -48,18 +48,45 @@ Select the desired playback order for media items within the selected collection
 **Shuffle In Order** can only be used with **Collection**, **Smart Collection** and **Multi Collection**
 :::
 
-### Playout Mode
+## Playout Mode
 
 Select how you want this schedule item to behave every time it is selected for playback.
 
-- **One** - Play one media item from the collection before advancing to the next schedule item.
-- **Multiple** - Play the specified **Multiple Count** of media items from the collection before advancing to the next schedule item.
-- **Duration** - Play the maximum number of complete media items that will fit in the specified **Playout Duration**
 - **Flood** - Play media items from the collection either forever or until the next schedule item's start time, if one exists.
+- **One** - Play one media item from the collection before advancing to the next schedule item.
+- **Multiple** - Play a specific number of media items from the collection before advancing to the next schedule item.
+- **Duration** - Play the maximum number of complete media items that will fit in the specified **Playout Duration**
 
-Click **Save Changes** to save all changes made to the schedule's items.
+## Multiple Mode
 
-### Tail Mode (Duration)
+When **Playout Mode** is **Multiple**, select how you want to determine the number of items to play.
+
+- **Count** - Play a specific (and unchanging) number of media items
+- **Collection Size** - Play all media items from the collection
+- **Multi-Episode Group Size** - Play all media items from the current multi-part episode group, or one ungrouped media item
+- **Playlist Item Size** - Play all media items from the current **playlist item** (*not* the current playlist)
+
+:::note
+- **Collection Size** cannot be used with **Collection Type** of **Playlist**
+- **Multi-Episode Group Size** can only be used when **Playback Order** is **Chronological**
+- **Playlist Item Size** can only be used with **Collection Type** of **Playlist**
+:::
+
+## Fill With Group Mode
+
+Use this setting when you want to schedule a collection containing groups (show or artists), with only videos from a single group (show or artist) being used in each rotation:
+
+- **None** - No change to scheduling behavior; all groups (shows and artists) will be shuffled and ordered together
+- **Ordered Groups** - Each time this item is scheduled, the entire **Duration** or **Multiple** will be filled with a single group, and the groups will rotate in a fixed order
+- **Shuffled Groups** - Each time this item is scheduled, the entire **Duration** or **Multiple** will be filled with a single group, and the groups will rotate in a shuffled order
+
+:::note
+- **Fill With Group Mode** can only be used with **Collection**, **Smart Collection** and **Multi Collection**
+- **Fill With Group Mode** can only be used with **Playout Mode** of **Duration** or **Multiple**
+- **Fill With Group Mode** cannot be used with **Playback Order** of **Shuffle In Order**
+:::
+
+## Tail Mode (Duration)
 
 Select how you want this duration schedule item to behave when no more complete media items will fit in the specified **Playout Duration**:
 
@@ -67,7 +94,23 @@ Select how you want this duration schedule item to behave when no more complete 
 - **Offline** - Show the ETV offline image for the remainder of the **Playout Duration**
 - **Filler** - Fill the remainder of the **Playout Duration** with the specified collection, followed by the ETV offline image if needed
 
-### Guide Mode
+## Discard To Fill Attempts (Duration)
+
+Enter the maximum number of times you want to discard items that do not fit within the conifgured **Playout Duration**, before giving up and moving to the next schedule item.
+
+:::note
+This setting only has an effect when it's configured to be greater than zero and when using **Shuffle** or **Random** playback order
+:::
+
+## Custom Title
+
+When **Custom Title** has a value, all playout items created by this schedule item will be grouped in the EPG and will use the **Custom Title** value as their title.
+
+:::note
+Using a **Custom Title** will prevent other metadata from appearing in the EPG
+:::
+
+## Guide Mode
 
 Select how you want this schedule item to behave in the channel guide:
 
