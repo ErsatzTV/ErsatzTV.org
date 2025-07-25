@@ -9,6 +9,6 @@ Here we are referring to Movie Boxsets, e.g. X-Men Collection, Star Trek Collect
 
 To Add a Multi Collection
 
-- Navigate to `Lists` > `Collections` and click the `Add Multi Collection` button
+- Navigate to **Lists** > **Collections** and click the **Add Multi Collection** button
 - Give the Multi Collection a name
-- Add collections and/or smart collections as required and click `Add Multi Collection` to save
+- Add collections and/or smart collections as required and click **Add Multi Collection** to save

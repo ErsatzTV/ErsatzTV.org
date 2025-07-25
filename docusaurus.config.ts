@@ -105,6 +105,7 @@ const config: Config = {
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
+        additionalLanguages: ["bash"]
       },
     } satisfies Preset.ThemeConfig,
 
@@ -136,6 +137,10 @@ const config: Config = {
             {
               from: '/docs/user-guide/configure-clients',
               to: '/docs/clients'
+            },
+            {
+              from: '/docs/user-guide/search',
+              to: '/docs/search'
             }
           ]
         } satisfies ClientRedirects.Options

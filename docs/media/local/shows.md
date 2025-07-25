@@ -6,11 +6,18 @@ sidebar_position: 2
 
 ### Folder Layout
 
-The `Shows` library requires show and season subfolders. The following is a (non-exhaustive) list of valid locations for episodes:
+The **Shows** library requires show and season subfolders. The following is a (non-exhaustive) example of valid (show and season) folders and filenames for episodes:
 
-- `Show (1999)\Season 01\Show - S01E01.mp4`
-- `Show\Season 1\Show - s1e1.mp4`
-- `Show\Season 1\Episode 1\Show - s1e1.mp4`
+```bash
+├── Some Show (1999)
+|   └── Season 01
+|       └── Show - S01E01.mp4
+└── Another Show
+    └── Season 1
+        ├── Show - s1e1.mp4
+        └── Episode 2
+            └── Show - s1e2.mp4
+```
 
 ### Show NFO Metadata
 
@@ -27,7 +34,7 @@ ErsatzTV will read the following fields from the show NFO:
 
 ### Show Fallback Metadata
 
-When no show NFO is found, the show metadata will only contain the title and an optional year, both parsed from the episode file name.
+When no show NFO is found, the show metadata will only contain the title and an optional year, both parsed from the show subfolder name.
 Examples:
 
 - `Title`

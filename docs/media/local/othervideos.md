@@ -6,7 +6,7 @@ sidebar_position: 4
 
 ### Folder Layout
 
-The `Other Videos` library has no folder requirements, but folders can be a useful source of metadata.
+The **Other Videos** library has no folder requirements, but folders can be a useful source of metadata.
 
 ### NFO Metadata
 
@@ -32,8 +32,15 @@ ErsatzTV will read the following fields from the other video NFO:
 
 Other videos will have a tag added to their metadata for every containing folder, including the top-level folder. As an example, consider adding a commercials folder with the following files:
 
-- `Commercials\1990\Cars\1990 Car Commercial 1.mkv`
-- `Commercials\1992\Cars\1992 Car Commercial 1.mkv`
+```bash
+└── Commercials
+    ├── 1990
+    │   └── Cars
+    │       └── 1990 Car Commercial 1.mkv
+    └── 1992
+        └── Cars
+            └── 1992 Car Commercial 1.mkv
+```
 
 Your other video library will then have two media items with the following metadata:
 
