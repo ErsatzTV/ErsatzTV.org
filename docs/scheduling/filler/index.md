@@ -1,7 +1,6 @@
 ---
-uid: scheduling-filler
+uid: scheduling-filler-index
 title: Filler
-sidebar_position: 2
 ---
 
 Filler is content that is used to fill otherwise unscheduled gaps, and to pad primary content to a desired time.
@@ -28,17 +27,3 @@ There are a number of filler kinds supported by ErsatzTV:
 
 To add filler to a schedule, a filler preset must first be created under `Lists` > `Filler Presets`.
 Once a filler preset is created, it can be attached to any number of schedule items in the schedule items editor.
-
-### Sample Preset: Trailers Pre-Roll
-
-This preset will play exactly three items from the `All Trailers` smart collection before each media item.
-
-![Trailers Pre-Roll](/images/docs/filler-preset-trailers-pre-roll.png)
-
-### Sample Preset: Pad To 30 Minutes With Commercials
-
-This preset will pad each media item to 30 minutes using items from the `Short Commercials` smart collection.
-Because `mid-roll` is selected as the filler kind, the filler will be approximately evenly distributed between chapters.
-
-![Pad To 30 With Commercials](/images/docs/filler-preset-pad-to-30-with-commercials.png)
-
