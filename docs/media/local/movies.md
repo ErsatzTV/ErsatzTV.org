@@ -6,10 +6,14 @@ sidebar_position: 1
 
 ### Folder Layout
 
-The `Movies` library requires movie subfolders. The following is a (non-exhaustive) list of valid locations for movies:
+The **Movies** library requires movie subfolders. The following is a (non-exhaustive) example of valid folders and filenames for movies:
 
-- `Movie (1999)\Movie (1999).mkv`
-- `Movie\Movie.mkv`
+```bash
+├── Movie (1999)
+|   └── Movie (1999).mkv
+└── Movie
+    └── Movie.mkv
+```
 
 ### NFO Metadata
 
@@ -35,4 +39,9 @@ ErsatzTV will read the following fields from the movie NFO:
 
 When no movie NFO is found, the movie metadata will only contain a title and a year, both parsed from the movie file name. Example:
 
-- `Movie (1999).mkv`
+```bash
+└── Movie (1999)
+    └── Movie (1999).mkv
+```
+- title: `Movie`
+- year: `1999`

@@ -28,19 +28,19 @@ ErsatzTV depends on an up-to-date version of FFmpeg and FFprobe. Docker images a
 
 1\. Download the latest container image
 
-```
+```bash
 docker pull ghcr.io/ersatztv/ersatztv
 ```
 
 2\. Create a directory to store configuration data
 
-```
+```bash
 mkdir /path/to/config
 ```
 
 3\. Create and run a container
 
-```
+```bash
 docker run -d \
   --name ersatztv \
   -e TZ=America/Chicago \
@@ -53,6 +53,6 @@ docker run -d \
 
 4\. To limit the writing to an SSD drive you can add a Temporary File System by adding this line to your docker container before the line `ghcr.io/ersatztv/ersatztv`
 
-```
+```bash
   --mount type=tmpfs,destination=/transcode \
 ```

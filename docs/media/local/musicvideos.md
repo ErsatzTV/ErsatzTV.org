@@ -6,11 +6,17 @@ sidebar_position: 3
 
 ### Folder Layout
 
-The `Music Videos` library requires artist subfolders. The following is a (non-exhaustive) list of valid locations for music videos:
+The **Music Videos** library requires artist subfolders. The following is a (non-exhaustive) example of valid artist folders and filenames for music videos:
 
-- `Artist\Album\Track.mp4`
-- `Artist\Track\Track.mp4`
-- `Artist\Track.mp4`
+```bash
+└── Artist
+    ├── Album
+    │   ├── Track One.mp4
+    │   └── Track Two.mp4
+    ├── Another Track
+    │   └── Another Track.mp4
+    └── Track Three.mp4
+```
 
 ### Artist NFO Metadata
 
