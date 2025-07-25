@@ -18,5 +18,5 @@ The development builds are updated with every push to the main branch and have t
 - [Windows](/docs/installation/windows)
 - [macOS](/docs/installation/macos)
 - [Linux](/docs/installation/linux)
-- [Docker](/docs/general/installation/docker)
-- [Unraid](/docs/general/installation/advanced/unraid)
+- [Docker](/docs/installation/docker)
+- [Unraid](/docs/installation/advanced/unraid)
