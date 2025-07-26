@@ -1,7 +1,7 @@
 ---
 uid: lists-trakt
 title: Trakt Lists
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 ### Import Trakt List
