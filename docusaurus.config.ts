@@ -2,7 +2,6 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import * as ClientRedirects from '@docusaurus/plugin-client-redirects';
-import * as Docs from '@docusaurus/plugin-content-docs';
 
 const config: Config = {
   title: 'ErsatzTV',
@@ -23,7 +22,8 @@ const config: Config = {
       'classic',
       {
         docs: {
-          sidebarPath: './sidebars.ts'
+          sidebarPath: './sidebars.ts',
+          editUrl: 'https://github.com/ErsatzTV/ErsatzTV.org/edit/main/'
         },
         theme: {
           customCss: './src/css/custom.css',

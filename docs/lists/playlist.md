@@ -1,7 +1,7 @@
 ---
 uid: lists-playlist
 title: Playlists
-sidebar_position: 2
+sidebar_position: 1
 hide_table_of_contents: true
 ---
 
