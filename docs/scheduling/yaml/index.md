@@ -7,7 +7,7 @@ YAML schedules (also referred to as YAML playouts) allow users to create sophist
 
 YAML schedule definitions contain four components:
 
-1. [Content Sources](/docs/scheduling/yaml/content)
-2. Sequences
-3. Reset Instructions
-4. Playout Instructions
+1. [Content Sources](/docs/scheduling/yaml/content) define the content (media items)
+2. [Sequences](/docs/scheduling/yaml/sequence) define reusable blocks of instructions
+3. [Reset Instructions](/docs/scheduling/yaml/reset) define what happens on playout reset
+4. [Playout Instructions](/docs/scheduling/yaml/playout) define the programming schedule
