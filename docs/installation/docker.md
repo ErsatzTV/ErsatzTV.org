@@ -4,6 +4,17 @@ title: Docker
 sidebar_position: 4
 ---
 
+:::warning
+If you want to use Windows or macOS, please run ErsatzTV natively instead. See [Windows](/docs/installation/windows) and [macOS](/docs/installation/macos).
+
+While it is possible to run ErsatzTV in Docker on a Windows or macOS host, it is **not** supported. Some features are known to be broken when running in Docker on platforms other than Linux, including:
+
+- Hardware acceleration
+- Scanning on macOS in Docker
+
+You **will not** receive any support for running ErsatzTV in Docker on platforms other than Linux.
+:::
+
 ## Docker Images
 
 <a href="https://hub.docker.com/r/jasongdove/ersatztv"><img alt="Docker Pull Count" src="https://img.shields.io/docker/pulls/jasongdove/ersatztv" /></a>
