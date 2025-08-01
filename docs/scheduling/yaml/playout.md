@@ -249,7 +249,6 @@ reset:
   - wait_until: "6:00 AM"
     tomorrow: false
     rewind_on_reset: true
-    offline_tail: false
 ```
 
 ```yaml
@@ -272,7 +271,7 @@ playout:
     name: "COOL_WATERMARK"
 
   - count: 1
-    name: "COOL_CONTENT"
+    content: "COOL_CONTENT"
 
   # reset to default watermark
   - watermark: false
