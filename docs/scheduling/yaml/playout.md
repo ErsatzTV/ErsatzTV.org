@@ -29,6 +29,12 @@ playout:
     content: "SPECIAL_EVENT"
 ```
 
+#### All parameters
+
+- **content** (required) - The "key" for the content that should play.
+- **custom_title** - Overrides the title that is used in the EPG for content scheduled by this instruction.
+- **filler_kind** - Flags this content as filler, which influences EPG grouping. Valid values are **none**, **preroll**, **postroll** and **midroll**. Default is **none**.
+
 ### Count
 
 **Count** instructions play a specific number of items from a content source.
@@ -37,9 +43,14 @@ playout:
 playout:
   - count: 3
     content: "MORNING_CARTOONS"
-    filler_kind: "none"
     custom_title: "Saturday Morning Block"
 ```
+
+#### Count parameters
+
+- **content** (required) - The "key" for the content that should play.
+- **custom_title** - Overrides the title that is used in the EPG for content scheduled by this instruction.
+- **filler_kind** - Flags this content as filler, which influences EPG grouping. Valid values are **none**, **preroll**, **postroll** and **midroll**. Default is **none**.
 
 ### Duration
 
@@ -53,6 +64,18 @@ playout:
     discard_attempts: 3
     fallback: "FILLER_CONTENT"
 ```
+
+#### Duration parameters
+
+- **duration** (required) - The amount of time that this content should play.
+- **content** (required) - The "key" for the content that should play.
+- **trim** - When **true**, will trim a content item to exactly fit the specified duration. Default is **false**.
+- **discard_attempts** - When **trim** is **false**, this is the number of times to discard items from the collection to find something that fits in the remaining duration.
+- **stop_before_end** - When **false**, allows content to run over the specified duration before moving to the next instruction. Default is **true**.
+- **offline_tail** - When **true**, after scheduling everything that will fit, any remaining time from the specified duration will be unscheduled (offline). Default is **false**.
+- **fallback** - The "key" for content that should be used to fill any remaining unscheduled time. One item will be selected from the content to be looped and trimmed to exactly fit.
+- **custom_title** - Overrides the title that is used in the EPG for content scheduled by this instruction.
+- **filler_kind** - Flags this content as filler, which influences EPG grouping. Valid values are **none**, **preroll**, **postroll** and **midroll**. Default is **none**.
 
 How duration works:
 
@@ -78,6 +101,16 @@ playout:
     filler_kind: "postroll"
 ```
 
+#### Pad To Next parameters
+
+- **pad_to_next** (required) - The minutes interval.
+- **content** (required) - The "key" for the content that should play.
+- **trim** - When **true**, will trim a content item to exactly fit the specified interval. Default is **false**.
+- **discard_attempts** - When **trim** is **false**, this is the number of times to discard items from the collection to find something that fits in the remaining interval.
+- **fallback** - The "key" for content that should be used to fill any remaining unscheduled time. One item will be selected from the content to be looped and trimmed to exactly fit.
+- **custom_title** - Overrides the title that is used in the EPG for content scheduled by this instruction.
+- **filler_kind** - Flags this content as filler, which influences EPG grouping. Valid values are **none**, **preroll**, **postroll** and **midroll**. Default is **none**.
+
 ### Pad Until
 
 **Pad Until** instructions will play content until a specific time.
@@ -93,6 +126,19 @@ playout:
     fallback: "BACKUP_CONTENT"
 ```
 
+#### Pad Until parameters
+
+- **pad_until** (required) - The time of day that this content should play until.
+- **content** (required) - The "key" for the content that should play.
+- **tomorrow** - Only used when the current playout time is already after the specified **pad_until** time. When **true**, content will be scheduled until the specified time of day (the next day). When **false**, this instruction will not schedule any content, and the playout will move to the next instruction.
+- **trim** - When **true**, will trim a content item to exactly fit until the specified time. Default is **false**.
+- **discard_attempts** - When **trim** is **false**, this is the number of times to discard items from the collection to find something that fits until the specified time.
+- **stop_before_end** - When **false**, allows content to run over the specified time before moving to the next instruction. Default is **true**.
+- **offline_tail** - When **true**, after scheduling everything that will fit, any remaining time will be unscheduled (offline). Default is **false**.
+- **fallback** - The "key" for content that should be used to fill any remaining unscheduled time. One item will be selected from the content to be looped and trimmed to exactly fit.
+- **custom_title** - Overrides the title that is used in the EPG for content scheduled by this instruction.
+- **filler_kind** - Flags this content as filler, which influences EPG grouping. Valid values are **none**, **preroll**, **postroll** and **midroll**. Default is **none**.
+
 ### Sequence
 
 **Sequence** instructions execute predefined [Sequence](/docs/scheduling/yaml/sequence) blocks.
@@ -106,6 +152,11 @@ playout:
   - sequence: "SHOW_BLOCK"
     repeat: 4  # Executes SHOW_BLOCK 4 times in a row
 ```
+
+#### Sequence parameters
+
+- **sequence** (required) - The "key" for the sequence that should be executed.
+- **repeat** - The number of times this sequence should be executed. Default value is **1**.
 
 ## Control Instructions
 
