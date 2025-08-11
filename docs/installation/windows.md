@@ -23,3 +23,4 @@ ErsatzTV depends on an up-to-date version of FFmpeg and FFprobe. Windows package
 4. Extract the latest release to the now-empty install location.
 5. Run `ErsatzTV-Windows.exe`.
 6. Use the tray menu to open the UI, view logs or exit.
+![1000013228](https://github.com/user-attachments/assets/55514260-7274-4f66-b192-176e648a4091)
