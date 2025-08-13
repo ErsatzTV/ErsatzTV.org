@@ -141,6 +141,10 @@ const config: Config = {
             {
               from: '/docs/user-guide/search',
               to: '/docs/search'
+            },
+            {
+              from: '/docs/channels/streamselector',
+              to: '/docs/advanced/custom-stream-selector'
             }
           ]
         } satisfies ClientRedirects.Options
