@@ -163,6 +163,8 @@ playout:
 Control instructions allow users to customize how the playout builder behaves, but do not directly schedule any content themselves.
 
 - [epg_group](#epg-group)
+- [graphics_on](#graphics-on)
+- [graphics_off](#graphics-off)
 - [repeat](#repeat)
 - [shuffle_sequence](#shuffle-sequence)
 - [skip_items](#skip-items)
@@ -229,6 +231,39 @@ playout:
     filler_kind: "postroll" # Won't appear in EPG
   
   - epg_group: false       # End program entry
+```
+
+### Graphics On
+
+:::warning
+This feature is under active development and is only available on develop [builds](/docs/installation/#development-builds) and [tags](/docs/installation/docker#development-release).
+:::
+
+**Graphics On** instructions turn on a graphics element using the [graphics engine](/docs/advanced/graphics-engine). The element will remain on until explicitly turned off.
+
+```yaml
+playout:
+  - graphics_on: "image/watermark.yml"
+
+  - count: 1
+    content: "MAIN_SHOW"
+```
+
+### Graphics Off
+
+:::warning
+This feature is under active development and is only available on develop [builds](/docs/installation/#development-builds) and [tags](/docs/installation/docker#development-release).
+:::
+
+**Graphics Off** instructions turn off one or all graphics elements in the [graphics engine](/docs/advanced/graphics-engine).
+
+```yaml
+playout:
+  # turn off one graphics element
+  - graphics_off: "text/upnext.yml"
+
+  # turn off all graphics elements
+  - graphics_off:
 ```
 
 ### Repeat

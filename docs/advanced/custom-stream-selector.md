@@ -1,5 +1,5 @@
 ---
-uid: channels-streamselector
+uid: advanced-custom-stream-selector
 title: Custom Stream Selector
 sidebar_position: 1
 ---

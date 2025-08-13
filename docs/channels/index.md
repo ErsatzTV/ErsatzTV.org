@@ -51,7 +51,7 @@ By default, subtitles are first filtered by **Preferred Subtitle Language** if c
 
 ### Custom Stream Selector
 
-A [custom stream selector](/docs/channels/streamselector) can be used for much greater control over audio and subtitle stream selection.
+A [custom stream selector](/docs/advanced/custom-stream-selector) can be used for much greater control over audio and subtitle stream selection.
 
 ## Logo
 
