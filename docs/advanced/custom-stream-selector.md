@@ -4,11 +4,11 @@ title: Custom Stream Selector
 sidebar_position: 1
 ---
 
-Custom stream selectors allow a high level of control over audio and subtitle stream selection by using a prioritized list of preferred audio and subtitle criteria.
+Custom stream selectors allow a high level of control over audio and subtitle stream selection by using a prioritized list of preferred audio, subtitle and content criteria.
 
 ## Stream Selector Definitions
 
-Stream selectors are defined in YAML files which must be placed in ErsatzTV's config folder / `scripts` / `channel-stream-selectors`, and they must contain a list of **items**, which are audio and subtitle criteria.
+Stream selectors are defined in YAML files which must be placed in ErsatzTV's config folder / `scripts` / `channel-stream-selectors`, and they must contain a list of **items**, which are audio, subtitle and content criteria.
 
 ```yaml
 items:
@@ -27,7 +27,7 @@ Audio and subtitle criteria must **both** be matched in a single item to finaliz
 
 ## Stream Selector Item Parameters
 
-### audio_language
+### Audio Language
 
 **audio_language** is a list of strings that may include wildcards (`*`) and are used to filter audio streams that do not match the specified language.
 
@@ -35,7 +35,7 @@ Audio and subtitle criteria must **both** be matched in a single item to finaliz
 audio_language: ["en", "eng"]
 ```
 
-### audio_title_blocklist
+### Audio Title Block List
 
 **audio_title_blocklist** is a list of strings and is used to filter audio streams when the audio title contains any string from the blocklist.
 
@@ -43,7 +43,7 @@ audio_language: ["en", "eng"]
 audio_title_blocklist: ["riff"]
 ```
 
-### audio_title_allowlist
+### Audio Title Allow List
 
 **audio_title_allowlist** is a list of strings and is used to filter audio streams when the audio title *does not* contain any string from the allowlist.
 
@@ -51,7 +51,7 @@ audio_title_blocklist: ["riff"]
 audio_title_allowlist: ["riff"]
 ```
 
-### audio_condition
+### Audio Condition
 
 **audio_condition** is an expression that can use the following fields:
 
@@ -68,7 +68,7 @@ audio_title_allowlist: ["riff"]
 audio_condition: "title like '%movie%' and channels > 2"
 ```
 
-### disable_subtitles
+### Disable Subtitles
 
 **disable_subtitles** will prevent selecting any subtitle when set to **true**.
 
@@ -76,7 +76,7 @@ audio_condition: "title like '%movie%' and channels > 2"
 disable_subtitles: true
 ```
 
-### subtitle_language
+### Subtitle Language
 
 **subtitle_language** is a list of strings that may include wildcards (`*`) and are used to filter subtitle streams that do not match the specified language.
 
@@ -84,7 +84,7 @@ disable_subtitles: true
 subtitle_language: ["en", "eng"]
 ```
 
-### subtitle_title_blocklist
+### Subtitle Title Block List
 
 **subtitle_title_blocklist** is a list of strings and is used to filter subtitle streams when the subtitle title contains any string from the blocklist.
 
@@ -92,7 +92,7 @@ subtitle_language: ["en", "eng"]
 subtitle_title_blocklist: ["riff"]
 ```
 
-### subtitle_title_allowlist
+### Subtitle Title Allow List
 
 **subtitle_title_allowlist** is a list of strings and is used to filter subtitle streams when the subtitle title *does not* contain any string from the allowlist.
 
@@ -100,7 +100,7 @@ subtitle_title_blocklist: ["riff"]
 subtitle_title_allowlist: ["riff"]
 ```
 
-### subtitle_condition
+### Subtitle Condition
 
 **subtitle_condition** is an expression that can use the following fields:
 
@@ -116,6 +116,23 @@ subtitle_title_allowlist: ["riff"]
 ```yaml
 # external/sidecar english subtitles
 subtitle_condition: "lang like 'en%' and external"
+```
+
+### Content Condition
+
+:::warning
+This feature is under active development and is only available on develop [builds](/docs/installation/#development-builds) and [tags](/docs/installation/docker#development-release).
+:::
+
+**content_condition** is an expression that can use the following fields:
+
+- **channel_number** - channel number
+- **channel_name** - channel name
+- **time_of_day_seconds** - the content start time, represented in seconds since midnight
+
+```yaml
+# after noon
+content_condition: "time_of_day_seconds >= 43200"
 ```
 
 ## Sample Stream Selectors
