@@ -46,13 +46,39 @@ vertical_margin_percent: 5
 
 z_index: 2
 
-font_family: "OPTIKabel-Heavy"
-font_size: 48
-font_color: "#FFFFFF"
+styles:
+  - name: "style1"
+    font_family: "OPTIKabel-Heavy"
+    font_size: 48
+    text_color: "#FFFFFF"
+    #font_weight: 800
+    #font_italic: true
+    #letter_spacing: 20
+
+base_style: "style1"
+
+# optionally include fonts from a specific folder
+include_fonts_from: "/home/user/fonts"
+
+# optionally include data from epg entries for text replacement
+epg_entries: 0
 
 text: |
   One Line Of Text
   Two Lines Of Text
+```
+
+### Subtitle Elements
+
+Subtitle elements are used to draw subtitles, and support dynamic subtitles using [Scriban](https://github.com/scriban/scriban) templates and variables.
+
+```yaml
+z_index: 3
+
+# optionally include data from epg entries for text replacement
+epg_entries: 0
+
+template: "/home/user/subtitles.ass"
 ```
 
 ## Using Graphics Elements
