@@ -2,11 +2,6 @@ import { themes as prismThemes } from "prism-react-renderer";
 import type * as Preset from "@docusaurus/preset-classic";
 import * as ClientRedirects from "@docusaurus/plugin-client-redirects";
 
-const { themes } = require("prism-react-renderer");
-
-const lightCodeTheme = themes.github;
-const darkCodeTheme = themes.dracula;
-
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "ErsatzTV",
