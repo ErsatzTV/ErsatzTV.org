@@ -20,7 +20,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           cache: npm
-          node-version: 20
+          node-version: 22
       - uses: actions/configure-pages@v5
       - name: Run build
         run: |

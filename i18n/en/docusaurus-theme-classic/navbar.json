@@ -1,0 +1,14 @@
+{
+  "logo.alt": {
+    "message": "ErsatzTV Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Documentation": {
+    "message": "Documentation",
+    "description": "Navbar item with label Documentation"
+  },
+  "item.label.Community": {
+    "message": "Community",
+    "description": "Navbar item with label Community"
+  }
+}
