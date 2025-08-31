@@ -32,7 +32,7 @@ export default function Showcase() {
           <span style={{ color: "#fff", fontWeight: 500 }}>
             Share your channel or EPG setup on our{" "}
             <a
-              href="https://discord.gg/hHaJm3yGy6"
+              href="https://discord.ersatztv.org"
               target="_blank"
               rel="noopener"
               style={{ color: "#00bcd4", textDecoration: "underline" }}
@@ -94,7 +94,7 @@ export default function Showcase() {
         </div>
         <div style={{ marginTop: 40 }}>
           <a
-            href="https://discord.gg/hHaJm3yGy6"
+            href="https://discord.ersatztv.org"
             target="_blank"
             rel="noopener"
             className="button button--secondary button--md"

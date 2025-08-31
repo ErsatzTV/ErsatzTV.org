@@ -11,7 +11,7 @@ export default function CommunitySupport() {
         </p>
         <div style={{ display: "flex", justifyContent: "center", gap: 24 }}>
           <a
-            href="https://discord.gg/hHaJm3yGy6"
+            href="https://discord.ersatztv.org"
             target="_blank"
             rel="noopener"
             className="button button--secondary button--md"
