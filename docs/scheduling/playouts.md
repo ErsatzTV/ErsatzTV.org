@@ -1,7 +1,7 @@
 ---
 uid: scheduling-playouts
 title: Playouts
-sidebar_position: 4
+sidebar_position: 5
 hide_table_of_contents: true
 ---
 
