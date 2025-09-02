@@ -340,17 +340,25 @@ playout:
 
 ### Watermark
 
-**Watermark** instructions can be used to override the watermark in the playout to the watermark with the provided name.
+**Watermark** instructions can be used to override watermarks in the playout to watermarks with the provided names.
 
 ```yaml
 playout:
-  # override watermark
+  # turn on COOL_WATERMARK
   - watermark: true
     name: "COOL_WATERMARK"
+
+  # turn on ANOTHER_WATERMARK
+  - watermark: true
+    name: "ANOTHER_WATERMARK"
 
   - count: 1
     content: "COOL_CONTENT"
 
-  # reset to default watermark
+  # turn off ANOTHER_WATERMARK
+  - watermark: false
+    name: "ANOTHER_WATERMARK"
+
+  # turn off all watermarks (reset to default)
   - watermark: false
 ```
