@@ -235,10 +235,6 @@ playout:
 
 ### Graphics On
 
-:::warning
-This feature is under active development and is only available on develop [builds](/docs/installation/#development-builds) and [tags](/docs/installation/docker#development-release).
-:::
-
 **Graphics On** instructions turn on a graphics element using the [graphics engine](/docs/advanced/graphics-engine). The element will remain on until explicitly turned off.
 
 ```yaml
@@ -250,10 +246,6 @@ playout:
 ```
 
 ### Graphics Off
-
-:::warning
-This feature is under active development and is only available on develop [builds](/docs/installation/#development-builds) and [tags](/docs/installation/docker#development-release).
-:::
 
 **Graphics Off** instructions turn off one or all graphics elements in the [graphics engine](/docs/advanced/graphics-engine).
 
@@ -268,7 +260,7 @@ playout:
 
 ### Repeat
 
-**Repeat** instructions reset the current instruction index, meaning the next instruction to execute will be the first playout instruction in the YAML schedule definition.
+**Repeat** instructions reset the current instruction index, meaning the next instruction to execute will be the first playout instruction in the sequential schedule definition.
 
 ```yaml
 playout:

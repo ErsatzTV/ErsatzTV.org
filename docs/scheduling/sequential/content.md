@@ -1,10 +1,10 @@
 ---
-uid: scheduling-yaml-content
+uid: scheduling-sequential-content
 title: Content Sources
 sidebar_position: 1
 ---
 
-Content sources define the content (media items) that will be used in the YAML schedule. Content sources include:
+Content sources define the content (media items) that will be used in the sequential schedule. Content sources include:
 
 - [Search](#search)
 - [Show](#show)
@@ -28,7 +28,7 @@ content:
 
 ### Search parameters
 
-- **key** (required) - Unique name that can be used to reference this content throughout the YAML schedule definition.
+- **key** (required) - Unique name that can be used to reference this content throughout the sequential schedule definition.
 - **query** (required) - Search expression that will be used to find content.
 - **order** (required) - Playback order; only **chronological** and **shuffle** are currently supported.
 
@@ -49,7 +49,7 @@ query: "type:episode AND (show_title:\"Friends\" OR show_title:\"Seinfeld\")"
 ```
 
 :::note
-Before using search queries in a YAML schedule, test them in the [search interface](/docs/search) to make sure they return the expected content. This helps to avoid empty content sources or unexpected scheduling results.
+Before using search queries in a sequential schedule, test them in the [search interface](/docs/search) to make sure they return the expected content. This helps to avoid empty content sources or unexpected scheduling results.
 :::
 
 ## Show
@@ -70,7 +70,7 @@ content:
 
 ### Show parameters
 
-- **key** (required) - Unique name that can be used to reference this content throughout the YAML schedule definition.
+- **key** (required) - Unique name that can be used to reference this content throughout the sequential schedule definition.
 - **guids** (required) - List of show identifiers (**source** and **value** pairs)
 - **order** (required) - Playback order; only **chronological** and **shuffle** are currently supported.
 
@@ -92,7 +92,7 @@ content:
 ### Collection parameters
 
 - **collection** (required) - The name of the existing [Manual Collection](/docs/collections/manual).
-- **key** (required) - Unique name that can be used to reference this content throughout the YAML schedule definition.
+- **key** (required) - Unique name that can be used to reference this content throughout the sequential schedule definition.
 - **order** (required) - Playback order; only **chronological** and **shuffle** are currently supported.
 
 ## Multi Collection
@@ -109,7 +109,7 @@ content:
 ### Multi Collection parameters
 
 - **multi_collection** (required) - The name of the existing [Multi Collection](/docs/collections/multi).
-- **key** (required) - Unique name that can be used to reference this content throughout the YAML schedule definition.
+- **key** (required) - Unique name that can be used to reference this content throughout the sequential schedule definition.
 - **order** (required) - Playback order; only **chronological** and **shuffle** are currently supported.
 
 ## Smart Collection
@@ -126,7 +126,7 @@ content:
 ### Smart Collection parameters
 
 - **smart_collection** (required) - The name of the existing [Smart Collection](/docs/collections/smart).
-- **key** (required) - Unique name that can be used to reference this content throughout the YAML schedule definition.
+- **key** (required) - Unique name that can be used to reference this content throughout the sequential schedule definition.
 - **order** (required) - Playback order; only **chronological** and **shuffle** are currently supported.
 
 ## Playlist
@@ -144,7 +144,7 @@ content:
 
 - **playlist** (required) - The name of the existing [Playlist](/docs/lists/playlist).
 - **playlist_group** (required) - The name of the existing **Playlist Group** that contains the named **Playlist**.
-- **key** (required) - Unique name that can be used to reference this content throughout the YAML schedule definition.
+- **key** (required) - Unique name that can be used to reference this content throughout the sequential schedule definition.
 
 ## Marathon
 
@@ -176,10 +176,10 @@ content:
 
 ### Marathon parameters
 
-- **key** (required) - Unique name that can be used to reference this content throughout the YAML schedule definition.
+- **key** (required) - Unique name that can be used to reference this content throughout the sequential schedule definition.
 - **guids** - List of external content identifiers (**source** and **value** pairs).
 - **searches** - List of search expressions.
-- **group_by** (required) - Tells the YAML scheduler how to group the combined content (returned from all guids and searches). Valid values are **show**, **season**, **artist** and **album**.
+- **group_by** (required) - Tells the sequential scheduler how to group the combined content (returned from all guids and searches). Valid values are **show**, **season**, **artist** and **album**.
 - **item_order** (required) - Playback order within each group; only **chronological** and **shuffle** are currently supported.
 - **play_all_items** - When **true**, will play every item from a group before moving to the next group. When **false**, will play one item from a group before moving to the next group.
 - **shuffle_groups** - When **true**, will randomize the order of groups. When **false**, will cycle through groups in a fixed order.
