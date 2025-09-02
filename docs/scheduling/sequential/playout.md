@@ -141,7 +141,7 @@ playout:
 
 ### Sequence
 
-**Sequence** instructions execute predefined [Sequence](/docs/scheduling/yaml/sequence) blocks.
+**Sequence** instructions execute predefined [Sequence](/docs/scheduling/sequential/sequence) blocks.
 
 ```yaml
 playout:

@@ -81,7 +81,7 @@ template: "/home/user/subtitles.ass"
 
 ### YAML Playouts
 
-Graphics elements can be turned on and off using the [YAML Playout Instructions](/docs/scheduling/yaml/playout) **Graphics On** and **Graphics Off**.
+Graphics elements can be turned on and off using the [Sequential Playout Instructions](/docs/scheduling/sequential/playout) **Graphics On** and **Graphics Off**.
 
 ### Troubleshooting
 
