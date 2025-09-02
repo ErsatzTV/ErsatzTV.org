@@ -1,10 +1,10 @@
 ---
-uid: scheduling-yaml-sequence
+uid: scheduling-sequential-sequence
 title: Sequences
 sidebar_position: 2
 ---
 
-Sequences define reusable blocks of instructions that can be executed multiple times throughout the YAML schedule.
+Sequences define reusable blocks of instructions that can be executed multiple times throughout the sequential schedule.
 
 ```yaml
 sequence:
@@ -22,8 +22,8 @@ sequence:
 
 ### Sequence parameters
 
-- **key** (required) - Unique name that can be used to reference this sequence throughout the YAML schedule definition.
-- **items** (required) - List of [Playout Instructions](/docs/scheduling/yaml/playout) to execute every time the sequence is referenced.
+- **key** (required) - Unique name that can be used to reference this sequence throughout the sequential schedule definition.
+- **items** (required) - List of [Playout Instructions](/docs/scheduling/sequential/playout) to execute every time the sequence is referenced.
 
 ### Benefits of sequences
 

@@ -141,7 +141,7 @@ playout:
 
 ### Sequence
 
-**Sequence** instructions execute predefined [Sequence](/docs/scheduling/yaml/sequence) blocks.
+**Sequence** instructions execute predefined [Sequence](/docs/scheduling/sequential/sequence) blocks.
 
 ```yaml
 playout:
@@ -235,10 +235,6 @@ playout:
 
 ### Graphics On
 
-:::warning
-This feature is under active development and is only available on develop [builds](/docs/installation/#development-builds) and [tags](/docs/installation/docker#development-release).
-:::
-
 **Graphics On** instructions turn on a graphics element using the [graphics engine](/docs/advanced/graphics-engine). The element will remain on until explicitly turned off.
 
 ```yaml
@@ -250,10 +246,6 @@ playout:
 ```
 
 ### Graphics Off
-
-:::warning
-This feature is under active development and is only available on develop [builds](/docs/installation/#development-builds) and [tags](/docs/installation/docker#development-release).
-:::
 
 **Graphics Off** instructions turn off one or all graphics elements in the [graphics engine](/docs/advanced/graphics-engine).
 
@@ -268,7 +260,7 @@ playout:
 
 ### Repeat
 
-**Repeat** instructions reset the current instruction index, meaning the next instruction to execute will be the first playout instruction in the YAML schedule definition.
+**Repeat** instructions reset the current instruction index, meaning the next instruction to execute will be the first playout instruction in the sequential schedule definition.
 
 ```yaml
 playout:
@@ -348,17 +340,25 @@ playout:
 
 ### Watermark
 
-**Watermark** instructions can be used to override the watermark in the playout to the watermark with the provided name.
+**Watermark** instructions can be used to override watermarks in the playout to watermarks with the provided names.
 
 ```yaml
 playout:
-  # override watermark
+  # turn on COOL_WATERMARK
   - watermark: true
     name: "COOL_WATERMARK"
+
+  # turn on ANOTHER_WATERMARK
+  - watermark: true
+    name: "ANOTHER_WATERMARK"
 
   - count: 1
     content: "COOL_CONTENT"
 
-  # reset to default watermark
+  # turn off ANOTHER_WATERMARK
+  - watermark: false
+    name: "ANOTHER_WATERMARK"
+
+  # turn off all watermarks (reset to default)
   - watermark: false
 ```

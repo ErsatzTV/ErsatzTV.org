@@ -120,10 +120,6 @@ subtitle_condition: "lang like 'en%' and external"
 
 ### Content Condition
 
-:::warning
-This feature is under active development and is only available on develop [builds](/docs/installation/#development-builds) and [tags](/docs/installation/docker#development-release).
-:::
-
 **content_condition** is an expression that can use the following fields:
 
 - **channel_number** - channel number
