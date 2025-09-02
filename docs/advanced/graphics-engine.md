@@ -4,10 +4,6 @@ title: Graphics Engine
 sidebar_position: 2
 ---
 
-:::warning
-This feature is under active development and is only available on develop [builds](/docs/installation/#development-builds) and [tags](/docs/installation/docker#development-release).
-:::
-
 The ErsatzTV graphics engine is used to overlay custom graphics elements (images and text) on top of the primary content with a high degree of control and customization.
 
 ## Graphics Element Definitions
