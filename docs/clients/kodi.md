@@ -7,7 +7,7 @@ sidebar_position: 5
 Kodi requires two steps to configure live TV:
 
 - [Install IPTV Client](#install-iptv-client)
-- [Configure source and EPG sources](#configure-sources)
+- [Configure source and EPG sources](#configure-source-and-epg-sources)
 
 ### Install IPTV Client 
 
