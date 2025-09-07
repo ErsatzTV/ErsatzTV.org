@@ -156,6 +156,10 @@ const config = {
             from: "/docs/channels/streamselector",
             to: "/docs/advanced/custom-stream-selector",
           },
+          {
+            from: "/docs/scheduling/yaml",
+            to: "/docs/scheduling/sequential"
+          }
         ],
       } satisfies ClientRedirects.Options,
     ],

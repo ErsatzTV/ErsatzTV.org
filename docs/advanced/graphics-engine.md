@@ -79,7 +79,7 @@ template: "/home/user/subtitles.ass"
 
 ## Using Graphics Elements
 
-### YAML Playouts
+### Sequential Schedules
 
 Graphics elements can be turned on and off using the [Sequential Playout Instructions](/docs/scheduling/sequential/playout) **Graphics On** and **Graphics Off**.
 
