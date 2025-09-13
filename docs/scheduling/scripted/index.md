@@ -3,10 +3,19 @@ uid: scheduling-scripted-index
 title: Scripted Schedules
 ---
 
-Scripted schedules allow users to create extremely customized channel programming using python scripts.
+:::warning
+This feature is under active development and is only available on develop [builds](/docs/installation/#development-builds) and [tags](/docs/installation/docker#development-release).
+:::
 
-Scripted schedules contain three methods:
+Scripted schedules allow users to create extremely customized channel programming using ErsatzTV's [OpenAPI description](https://github.com/ErsatzTV/ErsatzTV/blob/main/ErsatzTV/wwwroot/openapi/scripted-schedule.json).
 
-1. [define_content](/docs/scheduling/scripted/define_content) defines the content (media items), and is called before the playout is reset or built.
-2. [reset_playout](/docs/scheduling/scripted/reset_playout) is called when the playout is reset, and before the playout is built.
-3. [build_playout](/docs/scheduling/scripted/build_playout) is called when the playout is built.
+Scripted schedules are executed by ErsatzTV and are passed the following arguments (in order):
+
+1. The API host (e.g. `http://localhost:8409`)
+2. The build id (a UUID string that is required on all API calls)
+3. The playout build mode (e.g. `reset` or `continue`)
+4. Any custom arguments set in the **Scripted Schedule** field in the playout editor
+
+Scripted schedules must be directly executable. If they are not, a wrapper script can be used.
+
+An example implementation using Python is available in all docker images. See [Python in Docker](/docs/scheduling/scripted/python-docker).
