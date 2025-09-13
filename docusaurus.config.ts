@@ -80,6 +80,11 @@ const config = {
           label: "Documentation",
         },
         {
+          href: "https://features.ersatztv.org",
+          label: "Feature Requests",
+          position: "right",
+        },
+        {
           href: "https://discuss.ersatztv.org",
           label: "Community",
           position: "right",

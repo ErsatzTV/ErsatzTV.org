@@ -19,6 +19,14 @@ export default function CommunitySupport() {
             Join Discord
           </a>
           <a
+            href="https://features.ersatztv.org"
+            target="_blank"
+            rel="noopener"
+            className="button button--secondary button--md"
+          >
+            Vote on Feature Requests
+          </a>
+          <a
             href="https://github.com/ErsatzTV/ErsatzTV"
             target="_blank"
             rel="noopener"
