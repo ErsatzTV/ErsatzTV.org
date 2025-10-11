@@ -8,7 +8,9 @@ The ErsatzTV graphics engine is used to overlay custom graphics elements (images
 
 ## Graphics Element Definitions
 
-Graphics elements are defined in YAML files located in the ErsatzTV config folder / `templates` / `graphics-elements` subfolder. Image graphics elements definitions should be placed in the `image` subfolder, and text graphics element definitions should be placed in the `text` subfolder. ErsatzTV will automatically create these (empty) folders on startup.
+Graphics elements are defined in YAML files located in the ErsatzTV config folder / `templates` / `graphics-elements` subfolder. Each element type also has its own subfolder: Images in `image`, text in `text`, subtitles in `subtitle` and motion in `motion`. ErsatzTV will automatically create these (empty) folders on startup.
+
+All element definitions are pre-processed using [Scriban](https://github.com/scriban/scriban) templates.
 
 ### Image Elements
 
@@ -77,11 +79,44 @@ epg_entries: 0
 template: "/home/user/subtitles.ass"
 ```
 
+### Motion Elements
+
+Motion elements are used to draw video (transparent or opaque).
+
+```yaml
+video_path: /home/user/Videos/motion1.webm
+
+location: TopLeft
+horizontal_margin_percent: 5
+vertical_margin_percent: 5
+
+scale: true
+scale_width_percent: 25
+
+start_seconds: {{ MediaItem_Duration.TotalSeconds - 5 }}
+
+end_behavior: loop
+
+z_index: 1
+```
+
 ## Using Graphics Elements
+
+### Classic Schedules
+
+Graphics elements can be enabled on individual schedule items.
+
+### Block Schedules
+
+Graphics elements can be enabled on individual block items and on decos.
 
 ### Sequential Schedules
 
 Graphics elements can be turned on and off using the [Sequential Playout Instructions](/docs/scheduling/sequential/playout) **Graphics On** and **Graphics Off**.
+
+### Scripted Schedules
+
+Graphics elements can be turned on and off using `graphics_on` and `graphics_off` API calls.
 
 ### Troubleshooting
 
