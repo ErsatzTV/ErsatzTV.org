@@ -3,10 +3,6 @@ uid: scheduling-scripted-python-docker
 title: Python in Docker
 ---
 
-:::warning
-This feature is under active development and is only available on develop [builds](/docs/installation/#development-builds) and [tags](/docs/installation/docker#development-release).
-:::
-
 ### Entrypoint
 
 All docker images contain a pre-generated OpenAPI Python client and an [entrypoint script](https://github.com/ErsatzTV/ErsatzTV/blob/main/scripts/scripted-schedules/entrypoint.py).
