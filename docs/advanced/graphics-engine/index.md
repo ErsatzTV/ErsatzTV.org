@@ -1,7 +1,6 @@
 ---
 uid: advanced-graphics-engine
 title: Graphics Engine
-sidebar_position: 2
 ---
 
 The ErsatzTV graphics engine is used to overlay custom graphics elements (images and text) on top of the primary content with a high degree of control and customization.
