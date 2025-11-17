@@ -67,3 +67,54 @@ docker run -d \
 ```bash
   --mount type=tmpfs,destination=/transcode \
 ```
+
+## Docker Compose
+
+1\. Ensure you have docker compose installed: https://docs.docker.com/compose/install
+
+2\. Create your docker compose file using the below sample as a guide
+
+:::warning
+**NVIDIA GPU Passthrough**
+
+In order to use your Nvidia GPU with Docker, you will need to first install the Nvidia Container Toolkit.
+
+See [Nvidia Container Toolkit Installation](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
+:::
+```yaml
+services:
+  ersatztv:
+    image: ghcr.io/ersatztv/ersatztv
+    container_name: ersatztv
+    environment:
+      - TZ=America/Chicago # Edit for your timezome, list can be found https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+      - PGID=1000
+      - PUID=1000
+# UNCOMMENT THESE LINES TO ENABLE NVIDIA GPU PASSTHROUGH
+      #- NVIDIA_VISIBLE_DEVICES:all
+      #- NVIDIA_DRIVER_CAPABILITIES:all
+    #deploy:
+    #    resources:
+    #      reservations:
+    #        devices:
+    #          - driver: nvidia
+    #            count: 1
+    #            capabilities: [gpu]
+    ports: # This maps port from host:container
+      - "8409:8409"
+    volumes:
+     # Required: Configuration data (must be writable)
+      - /path/to/config:/config
+     # Required: media directories - Where your media files are stored. Use :ro at the end of the path to limit container to Read-Only
+      - /path/to/local/media:/path/to/local/media:ro
+# tmpfs is optional but recommended: Limits writing to SSD/disk by using RAM for transcode files. Comment out to disable
+    tmpfs:
+      - /transcode
+    restart: unless-stopped
+```
+
+3\. Run the container using docker compose command
+
+```bash
+docker compose up -d /path/to/compose/file
+```
