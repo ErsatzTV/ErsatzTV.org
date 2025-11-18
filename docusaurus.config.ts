@@ -6,7 +6,7 @@ import * as ClientRedirects from "@docusaurus/plugin-client-redirects";
 const config = {
   title: "ErsatzTV",
   tagline: "Your Personal IPTV Server",
-  favicon: "images/branding/favicon.icon",
+  favicon: "images/branding/favicon.ico",
   url: "https://ersatztv.org",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
