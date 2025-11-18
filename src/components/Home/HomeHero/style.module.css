@@ -1,0 +1,99 @@
+.heroBanner {
+  /* Inherit from hero classes */
+}
+
+.heroContent {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  color: #fff;
+}
+
+.textSection {
+  flex: 1 1 350px;
+  min-width: 300px;
+  max-width: 520px;
+  text-align: left;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 2.8rem;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 32px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.imageSection {
+  flex: 1 1 350px;
+  min-width: 300px;
+  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imageContainer {
+  width: 100%;
+  height: 280px;
+  background: linear-gradient(135deg, #222 60%, #444 100%);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.18);
+  margin-bottom: 12px;
+  border: 2px dashed #888;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.caption {
+  color: #fffc;
+  font-size: 15px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .heroContent {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .textSection {
+    text-align: center;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .imageContainer {
+    height: 220px;
+  }
+}

@@ -1,0 +1,33 @@
+.section {
+  padding: 3rem 0;
+}
+
+.container {
+  text-align: center;
+}
+
+.description {
+  max-width: 600px;
+  margin: 16px auto 32px;
+  color: #aaa;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .buttonGroup {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .buttonGroup a {
+    width: 100%;
+    max-width: 300px;
+  }
+}

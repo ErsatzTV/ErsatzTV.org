@@ -6,7 +6,7 @@ import * as ClientRedirects from "@docusaurus/plugin-client-redirects";
 const config = {
   title: "ErsatzTV",
   tagline: "Your Personal IPTV Server",
-  favicon: "images/favicon-32x32.png",
+  favicon: "images/branding/favicon.icon",
   url: "https://ersatztv.org",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
@@ -29,10 +29,19 @@ const config = {
   },
   scripts: [
     {
-      src: 'https://umami.ersatztv.org/script.js',
+      src: "https://umami.ersatztv.org/script.js",
       defer: true,
-      'data-website-id': 'a4c678e2-348a-426f-b9b5-4a93ceba6b36'
-    }
+      "data-website-id": "a4c678e2-348a-426f-b9b5-4a93ceba6b36",
+    },
+  ],
+  headTags: [
+    {
+      tagName: "link",
+      attributes: {
+        rel: "manifest",
+        href: "/images/branding/site.webmanifest",
+      },
+    },
   ],
   presets: [
     [
@@ -67,8 +76,7 @@ const config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: "images/docusaurus-social-card.jpg",
+    image: "images/branding/og-image.png",
     colorMode: {
       defaultMode: "dark",
       disableSwitch: true,
@@ -77,7 +85,7 @@ const config = {
     navbar: {
       logo: {
         alt: "ErsatzTV Logo",
-        src: "images/ersatztv.png",
+        src: "images/branding/ersatztv@120.png",
       },
       items: [
         {
@@ -170,8 +178,8 @@ const config = {
           },
           {
             from: "/docs/scheduling/yaml",
-            to: "/docs/scheduling/sequential"
-          }
+            to: "/docs/scheduling/sequential",
+          },
         ],
       } satisfies ClientRedirects.Options,
     ],

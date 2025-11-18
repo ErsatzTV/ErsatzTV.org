@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./style.module.css";
 
 export default function KeyFeatures() {
   const features = [
@@ -34,33 +35,15 @@ export default function KeyFeatures() {
     },
   ];
   return (
-    <section style={{ padding: "3rem 0", background: "#181c24" }}>
+    <section className={styles.section}>
       <div className="container">
-        <h2 style={{ textAlign: "center", marginBottom: 32 }}>Key Features</h2>
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            gap: 32,
-          }}
-        >
+        <h2 className={styles.title}>Key Features</h2>
+        <div className={styles.grid}>
           {features.map((f, i) => (
-            <div
-              key={i}
-              style={{
-                background: "#23283a",
-                borderRadius: 12,
-                padding: 24,
-                minWidth: 180,
-                maxWidth: 220,
-                textAlign: "center",
-                boxShadow: "0 2px 12px #0002",
-              }}
-            >
-              <div style={{ fontSize: 38, marginBottom: 12 }}>{f.icon}</div>
-              <h4 style={{ margin: "8px 0" }}>{f.title}</h4>
-              <p style={{ color: "#aaa", fontSize: 15 }}>{f.desc}</p>
+            <div key={i} className={styles.featureCard}>
+              <div className={styles.icon}>{f.icon}</div>
+              <h4 className={styles.featureTitle}>{f.title}</h4>
+              <p className={styles.description}>{f.desc}</p>
             </div>
           ))}
         </div>
