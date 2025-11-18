@@ -81,15 +81,14 @@ In order to use your Nvidia GPU with Docker, you will need to first install the 
 
 See [Nvidia Container Toolkit Installation](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
 :::
+
 ```yaml
 services:
   ersatztv:
     image: ghcr.io/ersatztv/ersatztv
     container_name: ersatztv
     environment:
-      - TZ=America/Chicago # Edit for your timezome, list can be found https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-      - PGID=1000
-      - PUID=1000
+      - TZ=America/Chicago # Edit for your timezone, list can be found https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 # UNCOMMENT THESE LINES TO ENABLE NVIDIA GPU PASSTHROUGH
       #- NVIDIA_VISIBLE_DEVICES:all
       #- NVIDIA_DRIVER_CAPABILITIES:all
