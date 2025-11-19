@@ -7,7 +7,7 @@ title: Python in Docker
 
 All docker images contain a pre-generated OpenAPI Python client and an [entrypoint script](https://github.com/ErsatzTV/ErsatzTV/blob/main/scripts/scripted-schedules/entrypoint.py).
 
-This entrypoint script loads the client module, the referenced scripted schedule (see [Configuring Playout](#configuring-playout)), and calls some well-known methods in the scripted schedule.
+This entrypoint script loads the client module, the referenced scripted schedule (see [Configuring Playout](/docs/scheduling/scripted/python-docker#configuring-playout)), and calls some well-known methods in the scripted schedule.
 
 ### Scripted Schedule
 

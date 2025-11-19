@@ -3,7 +3,7 @@ import React from "react";
 export default function WhatIsErsatzTV() {
   return (
     <section
-      style={{ padding: "3rem 0", background: "#23283a", color: "#aaa" }}
+      style={{ padding: "3rem 0", background: "#23283a", color: "#fff" }}
     >
       <div
         className="container"
@@ -14,7 +14,13 @@ export default function WhatIsErsatzTV() {
         }}
       >
         <div style={{ textAlign: "center", marginBottom: 24, color: "#fff" }}>
-          <div style={{ fontSize: 48, marginBottom: 16 }}>📡</div>
+          <div style={{ fontSize: 48, marginBottom: 16 }}>
+            <img
+              src="/images/branding/ersatztv_icon@84.png"
+              alt="ErsatzTV"
+              style={{ width: 84, height: 81 }}
+            />
+          </div>
           <h2 style={{ marginBottom: 18 }}>What is ErsatzTV?</h2>
         </div>
 

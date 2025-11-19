@@ -1,15 +1,16 @@
 import React from "react";
+import styles from "./style.module.css";
 
 export default function CommunitySupport() {
   return (
-    <section style={{ padding: "3rem 0" }}>
-      <div className="container" style={{ textAlign: "center" }}>
+    <section className={styles.section}>
+      <div className={`container ${styles.container}`}>
         <h2>Community & Support</h2>
-        <p style={{ maxWidth: 600, margin: "16px auto 32px", color: "#aaa" }}>
+        <p className={styles.description}>
           Join our active community to get help, share ideas, and contribute to
           the project. Connect with us on Discord or explore the code on GitHub!
         </p>
-        <div style={{ display: "flex", justifyContent: "center", gap: 24 }}>
+        <div className={styles.buttonGroup}>
           <a
             href="https://discord.ersatztv.org"
             target="_blank"
