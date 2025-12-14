@@ -1,4 +1,4 @@
----
+---redxbox
 uid: installation-windows
 title: Windows
 sidebar_position: 1
