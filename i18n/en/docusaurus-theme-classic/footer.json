@@ -3,9 +3,9 @@
     "message": "Documentation",
     "description": "The label of footer link with label=Documentation linking to /docs/intro"
   },
-  "link.item.label.Discord": {
-    "message": "Discord",
-    "description": "The label of footer link with label=Discord linking to https://discord.ersatztv.org"
+  "link.item.label.Contact": {
+    "message": "Contact",
+    "description": "The label of footer link with label=Contact linking to /contact"
   },
   "link.item.label.GitHub": {
     "message": "GitHub",
@@ -20,7 +20,7 @@
     "description": "The label of footer link with label=Donate linking to https://www.paypal.me/jasongdove"
   },
   "copyright": {
-    "message": "Copyright © 2025 Jason Dove",
+    "message": "Copyright © 2026 Jason Dove",
     "description": "The footer copyright"
   }
 }

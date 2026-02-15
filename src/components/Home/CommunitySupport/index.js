@@ -8,16 +8,15 @@ export default function CommunitySupport() {
         <h2>Community & Support</h2>
         <p className={styles.description}>
           Join our active community to get help, share ideas, and contribute to
-          the project. Connect with us on Discord or explore the code on GitHub!
+          the project. Chat with us or explore the code on GitHub!
         </p>
         <div className={styles.buttonGroup}>
           <a
-            href="https://discord.ersatztv.org"
-            target="_blank"
+            href="contact"
             rel="noopener"
             className="button button--secondary button--md"
           >
-            Join Discord
+            Chat Options
           </a>
           <a
             href="https://features.ersatztv.org"
