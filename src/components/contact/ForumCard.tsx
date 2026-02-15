@@ -3,17 +3,17 @@ import styles from "./style.module.css";
 
 const ForumCard = () => (
     <div className='card card--contact'>
-        <div className='card__header' style={{ display: 'flex' }}>
-            <h3 className='margin-bottom--none' style={{ flexGrow: 1 }}>
+        <div className='card__header'>
+            <h3 className='margin-bottom--none flex-grow-1'>
                 Forum
             </h3>
         </div>
         <div className='card__body'>
-            Join us in our commmunity for release announcements, troubleshooting, and development discussions.
+            Join us in our community for release announcements, troubleshooting, and development discussions.
         </div>
         <div className='card__footer'>
             <div className={styles.buttonGroup}>
-                <a href='https://discuss.ersatztv.org' className='button button--secondary button--forum'>
+                <a href='https://discuss.ersatztv.org' className='button button--secondary button--forum' target='_blank' rel='noopener noreferrer'>
                     Join the ErsatzTV Community
                 </a>
             </div>

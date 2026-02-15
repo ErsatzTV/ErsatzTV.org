@@ -11,13 +11,13 @@ export default function Contact() {
             <main className='margin-top--md margin-bottom--lg'>
                 <section className='container'>
                     <div className='row'>
-                        <div className='col col--4 margin-bottom--md' style={{ display: 'flex' }}>
+                        <div className='col col--4 margin-bottom--md d-flex'>
                             <MatrixCard />
                         </div>
-                        <div className='col col--4 margin-bottom--md' style={{ display: 'flex' }}>
+                        <div className='col col--4 margin-bottom--md d-flex'>
                             <DiscordCard />
                         </div>
-                        <div className='col col--4 margin-bottom--md' style={{ display: 'flex' }}>
+                        <div className='col col--4 margin-bottom--md d-flex'>
                             <ForumCard />
                         </div>
                     </div>
