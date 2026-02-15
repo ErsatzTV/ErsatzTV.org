@@ -28,3 +28,11 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+.d-flex {
+  display:flex;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}

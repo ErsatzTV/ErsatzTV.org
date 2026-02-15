@@ -1,0 +1,19 @@
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .buttonGroup {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .buttonGroup a {
+    width: 100%;
+    max-width: 300px;
+  }
+}

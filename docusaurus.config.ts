@@ -95,6 +95,11 @@ const config = {
           label: "Documentation",
         },
         {
+          to: "contact",
+          label: "Contact",
+          position: "right",
+        },
+        {
           href: "https://features.ersatztv.org",
           label: "Feature Requests",
           position: "right",
@@ -114,8 +119,8 @@ const config = {
           to: "/docs",
         },
         {
-          label: "Discord",
-          to: "https://discord.ersatztv.org",
+          label: "Contact",
+          to: "contact",
         },
         {
           label: "GitHub",
