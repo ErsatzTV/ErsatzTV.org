@@ -76,6 +76,14 @@ const config = {
   ],
 
   themeConfig: {
+    announcementBar: {
+      id: "archived",
+      content:
+        'ErsatzTV has been archived and is no longer actively maintained. <a href="https://github.com/ErsatzTV/ErsatzTV/issues/2839" target="_blank" rel="noopener noreferrer">See the announcement for details.</a>',
+      backgroundColor: "#7c3c00",
+      textColor: "#ffffff",
+      isCloseable: false,
+    },
     image: "images/branding/og-image.png",
     colorMode: {
       defaultMode: "dark",
