@@ -27,13 +27,6 @@ const config = {
     defaultLocale: "en",
     locales: ["en"],
   },
-  scripts: [
-    {
-      src: "https://umami.ersatztv.org/script.js",
-      defer: true,
-      "data-website-id": "a4c678e2-348a-426f-b9b5-4a93ceba6b36",
-    },
-  ],
   headTags: [
     {
       tagName: "link",
