@@ -3,7 +3,7 @@ uid: scheduling-scripted-index
 title: Scripted Schedules
 ---
 
-Scripted schedules allow users to create extremely customized channel programming using ErsatzTV's [OpenAPI description](https://github.com/ErsatzTV/ErsatzTV/blob/main/ErsatzTV/wwwroot/openapi/scripted-schedule.json).
+Scripted schedules allow users to create extremely customized channel programming using ErsatzTV's [OpenAPI description](https://github.com/ErsatzTV/legacy/blob/main/ErsatzTV/wwwroot/openapi/scripted-schedule.json).
 
 Scripted schedules are executed by ErsatzTV and are passed the following arguments (in order):
 

@@ -11,7 +11,7 @@ export default function Contribute() {
           issues, or sharing feedback.
         </p>
         <a
-          href="https://github.com/ErsatzTV/ErsatzTV"
+          href="https://github.com/ErsatzTV/legacy"
           target="_blank"
           rel="noopener"
           className="button button--secondary button--md"

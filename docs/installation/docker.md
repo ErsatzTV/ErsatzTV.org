@@ -17,19 +17,19 @@ You **will not** receive any support for running ErsatzTV in Docker on platforms
 
 ## Docker Images
 
-<a href="https://hub.docker.com/r/jasongdove/ersatztv"><img alt="Docker Pull Count" src="https://img.shields.io/docker/pulls/jasongdove/ersatztv" /></a>
+<a href="https://hub.docker.com/r/ersatztv/legacy"><img alt="Docker Pull Count" src="https://img.shields.io/docker/pulls/ersatztv/legacy" /></a>
 
 ### Latest Release
 
-- `jasongdove/ersatztv:latest`
-- `ghcr.io/ersatztv/ersatztv:latest`
+- `ersatztv/legacy:latest`
+- `ghcr.io/ersatztv/legacy:latest`
 
 ### Development Release
 
 Development releases update much more frequently, but have the potential to be less stable than full releases. 
 
-- `jasongdove/ersatztv:develop`
-- `ghcr.io/ersatztv/ersatztv:develop`
+- `ersatztv/legacy:develop`
+- `ghcr.io/ersatztv/legacy:develop`
 
 ### FFmpeg
 
@@ -40,7 +40,7 @@ ErsatzTV depends on an up-to-date version of FFmpeg and FFprobe. Docker images a
 1\. Download the latest container image
 
 ```bash
-docker pull ghcr.io/ersatztv/ersatztv
+docker pull ghcr.io/ersatztv/legacy
 ```
 
 2\. Create a directory to store configuration data
@@ -59,10 +59,10 @@ docker run -d \
   -v /path/to/config:/config \
   -v /path/to/local/media:/path/to/local/media:ro \
   --restart unless-stopped \
-  ghcr.io/ersatztv/ersatztv
+  ghcr.io/ersatztv/legacy
 ```
 
-4\. To limit the writing to an SSD drive you can add a Temporary File System by adding this line to your docker container before the line `ghcr.io/ersatztv/ersatztv`
+4\. To limit the writing to an SSD drive you can add a Temporary File System by adding this line to your docker container before the line `ghcr.io/ersatztv/legacy`
 
 ```bash
   --mount type=tmpfs,destination=/transcode \
@@ -85,7 +85,7 @@ See [Nvidia Container Toolkit Installation](https://docs.nvidia.com/datacenter/c
 ```yaml
 services:
   ersatztv:
-    image: ghcr.io/ersatztv/ersatztv
+    image: ghcr.io/ersatztv/legacy
     container_name: ersatztv
     environment:
       - TZ=America/Chicago # Edit for your timezone, list can be found https://en.wikipedia.org/wiki/List_of_tz_database_time_zones

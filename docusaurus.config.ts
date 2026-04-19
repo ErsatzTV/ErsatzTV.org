@@ -72,8 +72,8 @@ const config = {
     announcementBar: {
       id: "archived",
       content:
-        'ErsatzTV has been archived and is no longer actively maintained. <a href="https://github.com/ErsatzTV/ErsatzTV/issues/2839" target="_blank" rel="noopener noreferrer">See the announcement for details.</a>',
-      backgroundColor: "#7c3c00",
+        'ErsatzTV Legacy will continue to receive security updates for the foreseeable future. <a href="https://www.reddit.com/r/ErsatzTV/comments/1sp4jql/unarchiving_ersatztv_legacy" target="_blank" rel="noopener noreferrer">See the announcement for details.</a>',
+      backgroundColor: "#2c3c50",
       textColor: "#ffffff",
       isCloseable: false,
     },
@@ -99,17 +99,7 @@ const config = {
           to: "contact",
           label: "Contact",
           position: "right",
-        },
-        {
-          href: "https://features.ersatztv.org",
-          label: "Feature Requests",
-          position: "right",
-        },
-        {
-          href: "https://discuss.ersatztv.org",
-          label: "Community",
-          position: "right",
-        },
+        }
       ],
     },
     footer: {
@@ -125,7 +115,7 @@ const config = {
         },
         {
           label: "GitHub",
-          to: "https://github.com/ErsatzTV/ErsatzTV",
+          to: "https://github.com/ErsatzTV/legacy",
         },
         {
           label: "Sponsor",

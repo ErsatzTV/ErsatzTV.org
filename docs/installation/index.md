@@ -13,11 +13,11 @@ ErsatzTV is available as Docker images and as pre-built binary packages for Wind
 
 ### Release Builds
 
-Release builds can be found on ErsatzTV's [releases](https://github.com/ErsatzTV/ErsatzTV/releases) page. More details are provided on the platform-specific installation pages.
+Release builds can be found on ErsatzTV's [releases](https://github.com/ErsatzTV/legacy/releases) page. More details are provided on the platform-specific installation pages.
 
 ### Development Builds
 
-Development builds for all supported architectures can be found on the [develop release](https://github.com/ErsatzTV/ErsatzTV/releases/tag/develop).
+Development builds for all supported architectures can be found on the [develop release](https://github.com/ErsatzTV/legacy/releases/tag/develop).
 The development builds are updated with every push to the main branch and have the potential to be less stable than releases.
 
 ### Downgrading
