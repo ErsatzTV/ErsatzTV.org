@@ -7,7 +7,7 @@ sidebar_position: 1
 ### Installing on Windows
 
 1. Create a folder `ersatztv` at your preferred install location.
-2. Download and extract the [latest release from GitHub](https://github.com/ErsatzTV/ErsatzTV/releases) to the `ersatztv` folder.
+2. Download and extract the [latest release from GitHub](https://github.com/ErsatzTV/legacy/releases) to the `ersatztv` folder.
 3. Run `ErsatzTV-Windows.exe`.
 4. Use the tray menu to open the UI, view logs or exit.
 
@@ -19,7 +19,7 @@ ErsatzTV depends on an up-to-date version of FFmpeg and FFprobe. Windows package
 
 1. Cleanly exit ErsatzTV using the tray icon.
 2. Completely empty the folder where you originally extracted ErsatzTV.
-3. Download the [latest release from GitHub](https://github.com/ErsatzTV/ErsatzTV/releases).
+3. Download the [latest release from GitHub](https://github.com/ErsatzTV/legacy/releases).
 4. Extract the latest release to the now-empty install location.
 5. Run `ErsatzTV-Windows.exe`.
 6. Use the tray menu to open the UI, view logs or exit.

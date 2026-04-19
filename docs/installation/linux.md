@@ -7,7 +7,7 @@ sidebar_position: 3
 ### Installing on Linux
 
 1. Create a folder `ersatztv` at your preferred install location.
-2. Download and extract the [latest release from GitHub](https://github.com/ErsatzTV/ErsatzTV/releases) to the `ersatztv` folder.
+2. Download and extract the [latest release from GitHub](https://github.com/ErsatzTV/legacy/releases) to the `ersatztv` folder.
 3. Run `ErsatzTV`.
 4. Open your browser to `http://[server-ip]:8409`.
 
@@ -24,7 +24,7 @@ kill -SIGINT `pgrep ErsatzTV`
 ```
 
 2. Completely empty the folder where you originally extracted ErsatzTV.
-3. Download the [latest release from GitHub](https://github.com/ErsatzTV/ErsatzTV/releases).
+3. Download the [latest release from GitHub](https://github.com/ErsatzTV/legacy/releases).
 4. Extract the latest release to the now-empty install location.
 5. Run `ErsatzTV`.
 6. Open your browser to `http://[server-ip]:8409`.

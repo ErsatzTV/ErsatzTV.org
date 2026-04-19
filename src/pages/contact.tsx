@@ -1,6 +1,5 @@
 import Layout from "@theme/Layout";
 import DiscordCard from '../components/contact/DiscordCard';
-import ForumCard from '../components/contact/ForumCard';
 import MatrixCard from '../components/contact/MatrixCard';
 
 export default function Contact() {
@@ -11,14 +10,11 @@ export default function Contact() {
             <main className='margin-top--md margin-bottom--lg'>
                 <section className='container'>
                     <div className='row'>
-                        <div className='col col--4 margin-bottom--md d-flex'>
+                        <div className='col col--6 margin-bottom--md d-flex'>
                             <MatrixCard />
                         </div>
-                        <div className='col col--4 margin-bottom--md d-flex'>
+                        <div className='col col--6 margin-bottom--md d-flex'>
                             <DiscordCard />
-                        </div>
-                        <div className='col col--4 margin-bottom--md d-flex'>
-                            <ForumCard />
                         </div>
                     </div>
                 </section>

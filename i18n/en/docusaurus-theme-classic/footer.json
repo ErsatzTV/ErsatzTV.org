@@ -9,7 +9,7 @@
   },
   "link.item.label.GitHub": {
     "message": "GitHub",
-    "description": "The label of footer link with label=GitHub linking to https://github.com/ErsatzTV/ErsatzTV"
+    "description": "The label of footer link with label=GitHub linking to https://github.com/ErsatzTV/legacy"
   },
   "link.item.label.Sponsor": {
     "message": "Sponsor",
