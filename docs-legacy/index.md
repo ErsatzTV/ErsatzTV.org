@@ -6,7 +6,7 @@ sidebar_position: 1
 
 # ErsatzTV Legacy
 
-**ErsatzTV Legacy** is software for configuring and streaming custom live channels using your media library. The software is under active development and may be unstable.
+**ErsatzTV Legacy** is software for configuring and streaming custom live channels using your media library.
 
 Want to join the community or have a question? See our [contact](/contact) options.
 
