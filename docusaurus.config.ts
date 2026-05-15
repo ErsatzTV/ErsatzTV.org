@@ -41,10 +41,7 @@ const config = {
       "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       {
-        docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/ErsatzTV/ErsatzTV.org/edit/main/",
-        },
+        docs: false,
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
@@ -60,6 +57,10 @@ const config = {
         // ... Your options.
         // `hashed` is recommended as long-term-cache of index file is possible.
         hashed: true,
+        indexBlog: false,
+        docsDir: ["docs-legacy", "docs-next"],
+        docsRouteBasePath: ["docs", "next-docs"],
+        docsPluginIdForPreferredVersion: "next",
         // For Docs using Chinese, The `language` is recommended to set to:
         // ```
         // language: ["en", "zh"],
@@ -92,8 +93,16 @@ const config = {
         {
           type: "doc",
           docId: "index",
+          docsPluginId: "next",
           position: "right",
-          label: "Documentation",
+          label: "Next Docs",
+        },
+        {
+          type: "doc",
+          docId: "index",
+          docsPluginId: "legacy",
+          position: "right",
+          label: "Legacy Docs",
         },
         {
           to: "contact",
@@ -107,7 +116,7 @@ const config = {
       links: [
         {
           label: "Documentation",
-          to: "/docs",
+          to: "/next-docs",
         },
         {
           label: "Contact",
@@ -131,11 +140,29 @@ const config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
-      additionalLanguages: ["bash", "yaml"],
+      additionalLanguages: ["bash", "yaml", "powershell"],
     },
   } satisfies Preset.ThemeConfig,
 
   plugins: [
+    [
+      "@docusaurus/plugin-content-docs", {
+        id: "legacy",
+        path: "docs-legacy",
+        routeBasePath: "docs",
+        sidebarPath: require.resolve("./sidebars-legacy.ts"),
+        editUrl: "https://github.com/ErsatzTV/ErsatzTV.org/edit/main"
+      }
+    ],
+    [
+      "@docusaurus/plugin-content-docs", {
+        id: "next",
+        path: "docs-next",
+        routeBasePath: "next-docs",
+        sidebarPath: require.resolve("./sidebars-next.ts"),
+        editUrl: "https://github.com/ErsatzTV/ErsatzTV.org/edit/main"
+      }
+    ],
     [
       "@docusaurus/plugin-client-redirects",
       {

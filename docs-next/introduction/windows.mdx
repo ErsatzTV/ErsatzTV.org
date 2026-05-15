@@ -1,0 +1,109 @@
+---
+uid: getstarted-windows
+title: Windows
+sidebar_position: 1
+---
+
+# Getting Started with Windows
+
+This quickstart guide is designed to be straightforward and easy to follow. It guides you through the process of setting up ErsatzTV Next on Windows, including downloading the required tools, configuring the application, and starting the server.
+
+**To run ErsatzTV Next on Windows, you need the following tools:**
+
+<section className="container">
+  <div className="row" style={{ gap: "1rem" }}>
+    <Card style={{ width: 300 }}>
+      <CardHeader>ErsatzTV Next</CardHeader>
+      <CardBody>**Download** the `windows-x64` develop release to run ErsatzTV Next</CardBody>
+      <CardFooter>
+        [Download ErsatzTV
+        Next](https://github.com/ErsatzTV/next/releases/tag/develop)
+      </CardFooter>
+    </Card>
+    <Card style={{ width: 300 }}>
+      <CardHeader>FFmpeg</CardHeader>
+      <CardBody>**Download** a compatible FFmpeg version</CardBody>
+      <CardFooter>
+        [Download FFmpeg](https://github.com/ErsatzTV/ErsatzTV-ffmpeg/releases/download/7.1.1/ffmpeg-n7.1.1-56-gc2184b65d2-win64-gpl-7.1.zip)
+      </CardFooter>
+    </Card>
+  </div>
+</section>
+
+### Installation Folder
+
+Download and extract all executable files into a single installation folder. This folder must contain:
+
+- `ersatztv.exe`
+- `ersatztv-channel.exe`
+- `ersatztv-playout-generator.exe`
+- `ffmpeg.exe`
+- `ffprobe.exe`
+
+![Windows Installation Folder](/images/next-docs/windows-installation-folder.png)
+
+### Config Folder
+
+Next, create a folder to store the ErsatzTV Next configuration files. In this guide, the folder `ErsatzTV` is created under the user's `Documents` folder, for example:
+
+`C:\Users\Jason\Documents\ErsatzTV`
+
+At this point, the config folder should be empty.
+
+![Windows Config Folder](/images/next-docs/windows-config-folder.png)
+
+## Create a channel
+
+After preparing the installation folder creating the config folder, use the ErsatzTV Next CLI to create a channel.
+
+Right click a blank area in the installation folder and select **Open in Terminal**. Paste the following command, replacing `Jason` with your Windows username, then press **[enter]**.
+
+```powershell
+.\ersatztv.exe add-lineup "C:\Users\Jason\Documents\ErsatzTV\lineup.json" --channels 1
+```
+
+This command produces no output, but it creates several files and folders in the config folder.
+
+![Windows Create Channel Terminal](/images/next-docs/windows-create-channel-terminal.png)
+
+![Windows Create Channel Folder](/images/next-docs/windows-create-channel-folder.png)
+
+## Add content to the channel
+
+After creating the channel, the next step is to add content. In the same terminal, paste the following command.
+
+Replace `Jason` with your Windows username. Also replace `C:\Users\Jason\Videos` with a folder containing your media.
+
+```powershell
+.\ersatztv-playout-generator.exe --lineup "C:\Users\Jason\Documents\ErsatzTV\lineup.json" --channel 1 --content-folder "C:\Users\Jason\Videos"
+```
+
+This command outputs the name of a generated file that tells the channel what content to play and when to play it.
+
+![Windows Add Content Terminal](/images/next-docs/windows-add-content-terminal.png)
+
+## Start the server
+
+Start the ErsatzTV next server so clients can watch the channel.
+
+```powershell
+.\ersatztv.exe "C:\Users\Jason\Documents\ErsatzTV\lineup.json"
+```
+
+This command confirms that the channel loaded successfully. Windows may also prompt you to **Allow** connections through the Windows Firewall.
+
+![Windows Start Server Terminal](/images/next-docs/windows-start-server-terminal.png)
+
+## Watch the channel
+
+You can now watch the channel using any compatible HLS player.
+
+For quick verification, you can use the following web-based plater, assuming the default configuration values have not been changed. The link is preconfigured to load the channel automatically.
+
+[hls.js demo](https://hlsjs.video-dev.org/demo/?src=http%3A%2F%2Flocalhost%3A8409%2Fchannel%2F1.m3u8)
+
+![Windows Watch Channel](/images/next-docs/windows-watch-channel.jpg)
+
+## Stop the server
+
+When you are finished watching the channel and want to stop the server, focus the terminal window and press **[ctrl]+c**.
