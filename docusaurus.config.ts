@@ -123,7 +123,11 @@ const config = {
           to: "contact",
         },
         {
-          label: "GitHub",
+          label: "Next GitHub",
+          to: "https://github.com/ErsatzTV/next",
+        },
+        {
+          label: "Legacy GitHub",
           to: "https://github.com/ErsatzTV/legacy",
         },
         {
