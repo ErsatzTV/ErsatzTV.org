@@ -27,6 +27,10 @@ ErsatzTV supports [JSON Web Tokens (JWT)](https://en.wikipedia.org/wiki/JSON_Web
 
 When configured, a JWT signed with the configured signing key is required to be passed in the query string as **access_token**. For example `http://localhost:8409/iptv/channels.m3u?access_token=ABCDEF`. When channels are retrieved this way, the access token will automatically be passed through to all necessary URLs.
 
+:::info
+HDHomeRun endpoints will be disabled when JWT is used as they are unauthenticated.
+:::
+
 ### Issuer Signing Key
 
 The signing key must consist of 32 random characters.
