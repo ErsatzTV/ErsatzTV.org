@@ -13,7 +13,7 @@ sidebar_position: 3
 
 #### FFmpeg
 
-ErsatzTV depends on an up-to-date version of FFmpeg and FFprobe. A compatible version of FFmpeg may be found at [ErsatzTV-FFmpeg](https://github.com/ErsatzTV/ErsatzTV-ffmpeg/releases/tag/7.1.1).
+ErsatzTV depends on an up-to-date version of FFmpeg and FFprobe. A compatible version of FFmpeg may be found at [ErsatzTV-FFmpeg](https://github.com/ErsatzTV/ErsatzTV-ffmpeg/releases/latest).
 
 ### Updating on Linux
 
