@@ -3,7 +3,7 @@ uid: installation-index
 title: Installation
 ---
 
-ErsatzTV is available as Docker images and as pre-built binary packages for Windows (x64), MacOS (x64, arm64) and Linux (x64, arm64, arm). 
+ErsatzTV is available as Docker images and as pre-built binary packages for Windows (x64), MacOS (x64, arm64) and Linux (x64, arm64). 
 
 - [Windows](/docs/installation/windows)
 - [macOS](/docs/installation/macos)

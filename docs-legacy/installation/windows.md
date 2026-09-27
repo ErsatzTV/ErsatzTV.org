@@ -13,7 +13,7 @@ sidebar_position: 1
 
 #### FFmpeg
 
-ErsatzTV depends on an up-to-date version of FFmpeg and FFprobe. Windows packages are bundled with all required dependencies, including FFmpeg. A compatible version of FFmpeg may also be found at [ErsatzTV-FFmpeg](https://github.com/ErsatzTV/ErsatzTV-ffmpeg/releases/tag/7.1.1).
+ErsatzTV depends on an up-to-date version of FFmpeg and FFprobe. Windows packages are bundled with all required dependencies, including FFmpeg. A compatible version of FFmpeg may also be found at [ErsatzTV-FFmpeg](https://github.com/ErsatzTV/ErsatzTV-ffmpeg/releases/latest).
 
 ### Updating on Windows
 
