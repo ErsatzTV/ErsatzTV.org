@@ -31,6 +31,8 @@ Development releases update much more frequently, but have the potential to be l
 - `ersatztv/legacy:develop`
 - `ghcr.io/ersatztv/legacy:develop`
 
+Each development build is also tagged with its own version (e.g. `ersatztv/legacy:v26.10.0-f8410286-develop`), which can be used to pin a specific development build.
+
 ### FFmpeg
 
 ErsatzTV depends on an up-to-date version of FFmpeg and FFprobe. Docker images are bundled with all required dependencies, including FFmpeg.
