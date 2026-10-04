@@ -13,7 +13,9 @@ sidebar_position: 2
 
 #### FFmpeg
 
-ErsatzTV depends on an up-to-date version of FFmpeg and FFprobe. A compatible version of FFmpeg may be installed from [Homebrew](https://formulae.brew.sh/formula/ffmpeg). Installing FFmpeg from homebrew will also install FFprobe.
+ErsatzTV depends on an up-to-date version of FFmpeg and FFprobe. macOS packages are bundled with all required dependencies, including FFmpeg, so FFmpeg from Homebrew is not needed. A custom FFmpeg path must point to an [ErsatzTV-FFmpeg](https://github.com/ErsatzTV/ErsatzTV-ffmpeg/releases/latest) build (the `macos64` or `macosarm64` assets).
+
+When updating from a version without bundled FFmpeg, ErsatzTV switches the configured FFmpeg and FFprobe paths to the bundled builds once, on first start.
 
 ### Updating on macOS
 
