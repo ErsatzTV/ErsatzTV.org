@@ -18,7 +18,7 @@ The latest release build can be found on ErsatzTV's [latest release](https://git
 ### Development Builds
 
 The [latest development build](https://github.com/ErsatzTV/legacy-develop-builds/releases/latest) for all supported architectures can be found in the separate [legacy-develop-builds](https://github.com/ErsatzTV/legacy-develop-builds/releases) repository.
-A new development build is published for every push to the main branch, and is named after the upcoming release and the commit it was built from, e.g. `v26.11.0-f8410286-develop` for a build made after `v26.10.0`.
+Development builds are published from the main branch as changes accumulate, often bundling several changes into one build, and each is named after the upcoming release and the commit it was built from, e.g. `v26.11.0-f8410286-develop` for a build made after `v26.10.0`.
 Development builds have the potential to be less stable than releases, and only the 100 most recent development builds are kept.
 
 ### Downgrading
