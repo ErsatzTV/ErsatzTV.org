@@ -48,6 +48,7 @@ Video is transcoded when the item has:
 - a generated (`lavfi`) source
 - an AVI source
 - a file that starts between keyframes (common for clips cut from recordings), or no keyframes where playback starts
+- a frame rate that differs from the channel's `frame_rate`, when it is set (see [Frame Rate](frame-rate))
 
 Audio is transcoded when the item has a source codec that is not in `copy_formats`, a generated (`lavfi`) source, or an AVI source.
 

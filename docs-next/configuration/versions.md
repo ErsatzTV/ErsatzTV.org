@@ -16,7 +16,7 @@ Every ErsatzTV Next config file declares the version of its format in a `version
 ## Current Versions
 
 - **Lineup**: `https://ersatztv.org/lineup/version/0.0.1`
-- **Channel**: `https://ersatztv.org/channel/version/0.1.0`
+- **Channel**: `https://ersatztv.org/channel/version/0.1.1`
 - **Playout**: `https://ersatztv.org/playout/version/0.0.5`
 
 ## Compatibility
