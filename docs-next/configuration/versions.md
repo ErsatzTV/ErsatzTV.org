@@ -26,6 +26,8 @@ Versions have the form `0.B.C` (`B` for breaking, `C` for compatible):
 - `B` changes when the format changes in a way that older files can't be read correctly. ErsatzTV Next rejects a file whose `B` differs from its own.
 - `C` changes when the format gains new, optional properties. ErsatzTV Next loads any file with the same `B` and a `C` up to its own.
 
+A release of ErsatzTV Next that changes a config's `B` is itself a breaking release, and each release lists the config versions it reads. See [Releases](../releases).
+
 A file without a `version` is treated as `0.0.0`. A lineup without a version still loads. A channel config without a version is rejected, because the channel format is now `0.1.0`.
 
 ## Channel Config Overlays
