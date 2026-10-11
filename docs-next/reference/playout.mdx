@@ -1,0 +1,138 @@
+---
+title: Playout
+sidebar_position: 3
+description: Every property of the ErsatzTV Next playout file.
+---
+
+import Playout from './_generated/playout/Playout.mdx';
+import PlayoutItem from './_generated/playout/PlayoutItem.mdx';
+import PlayoutItemTracks from './_generated/playout/PlayoutItemTracks.mdx';
+import TrackSelection from './_generated/playout/TrackSelection.mdx';
+import PlayoutItemSource from './_generated/playout/PlayoutItemSource.mdx';
+import LocalSource from './_generated/playout/LocalSource.mdx';
+import LavfiSource from './_generated/playout/LavfiSource.mdx';
+import HttpSource from './_generated/playout/HttpSource.mdx';
+import RtspSource from './_generated/playout/RtspSource.mdx';
+import ScriptSource from './_generated/playout/ScriptSource.mdx';
+import DynamicSource from './_generated/playout/DynamicSource.mdx';
+import ProbeHint from './_generated/playout/ProbeHint.mdx';
+import VideoHint from './_generated/playout/VideoHint.mdx';
+import AudioHint from './_generated/playout/AudioHint.mdx';
+import SubtitleHint from './_generated/playout/SubtitleHint.mdx';
+import GraphicsLayer from './_generated/playout/GraphicsLayer.mdx';
+import GraphicsTiming from './_generated/playout/GraphicsTiming.mdx';
+import PeriodicTiming from './_generated/playout/PeriodicTiming.mdx';
+import GraphicsLayerKind from './_generated/playout/GraphicsLayerKind.mdx';
+import GraphicsLocation from './_generated/playout/GraphicsLocation.mdx';
+import PeriodicClock from './_generated/playout/PeriodicClock.mdx';
+
+A playout file lists what a channel plays during one time window. The channel reads them from its playout folder
+([`playout.folder`](./channel.mdx#playoutconfig) in `channel.json`) and loads the file that covers the current time.
+Playouts are written by a scheduler, such as ErsatzTV (legacy).
+
+- Every playout file must have `version`. See [Config Versions](./versions.md).
+- Times are RFC 3339 with an offset, e.g. `2026-04-13T20:00:00.000-05:00`.
+- **Since** is the first playout version with the property. A property marked *unreleased* is on `main` and not in a
+  release yet.
+
+```json
+{
+  "version": "https://ersatztv.org/playout/version/0.0.6",
+  "items": [
+    {
+      "id": "1",
+      "start": "2026-04-13T20:00:00.000-05:00",
+      "finish": "2026-04-13T20:30:00.000-05:00",
+      "source": { "source_type": "local", "path": "/media/shows/episode-1.mkv" }
+    }
+  ]
+}
+```
+
+## Top level {#playout}
+
+<Playout />
+
+## `items[]` {#playoutitem}
+
+<PlayoutItem />
+
+## `tracks` {#playoutitemtracks}
+
+<PlayoutItemTracks />
+
+### Track selection {#trackselection}
+
+<TrackSelection />
+
+## Sources {#playoutitemsource}
+
+<PlayoutItemSource />
+
+### `local` {#localsource}
+
+<LocalSource />
+
+### `lavfi` {#lavfisource}
+
+<LavfiSource />
+
+### `http` {#httpsource}
+
+<HttpSource />
+
+### `rtsp` {#rtspsource}
+
+<RtspSource />
+
+### `script` {#scriptsource}
+
+<ScriptSource />
+
+### `dynamic` {#dynamicsource}
+
+<DynamicSource />
+
+## Probe hints {#probehint}
+
+<ProbeHint />
+
+### Video hint {#videohint}
+
+<VideoHint />
+
+### Audio hint {#audiohint}
+
+<AudioHint />
+
+### Subtitle hint {#subtitlehint}
+
+<SubtitleHint />
+
+## Graphics layers {#graphicslayer}
+
+<GraphicsLayer />
+
+### Timing {#graphicstiming}
+
+<GraphicsTiming />
+
+#### `periodic` {#periodictiming}
+
+<PeriodicTiming />
+
+## Values
+
+The allowed values for properties that take a fixed set of strings.
+
+### `GraphicsLayerKind` {#graphicslayerkind}
+
+<GraphicsLayerKind />
+
+### `GraphicsLocation` {#graphicslocation}
+
+<GraphicsLocation />
+
+### `PeriodicClock` {#periodicclock}
+
+<PeriodicClock />

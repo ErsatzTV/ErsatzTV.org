@@ -13,7 +13,7 @@
 | `format` | [`VideoFormat`](#videoformat) | `"h264"` | 0.1.0 | Codec for transcoded items. When `mode` is `copy`, this and all other video settings apply only to items that are not copied. |
 | `frame_rate` | `string` | `null` | 0.1.1 | Output frame rate, `N` or `N/D` (e.g. `25`, `30000/1001`). Frames are dropped or repeated to match it. In `copy` mode, only items at this rate are copied. Unset keeps the source rate. |
 | `height` | `integer` |  | 0.1.0 | Height in pixels. Applies only when `width` is also set; otherwise the source size is kept. The fallback uses 1080 when unset. |
-| `mode` | [`StreamMode`](#streammode) | `"transcode"` | 0.1.0 | `copy`: copy items with a source codec in `copy_formats`. Transcode all other items, and items with graphics, burned-in subtitles, still images, Dolby Vision profile 5 or AVI sources. |
+| `mode` | [`StreamMode`](#streammode) | `"transcode"` | 0.1.0 | Whether to transcode every item or copy items whose codec allows it. In `copy` mode, items with graphics, burned-in subtitles, still images, Dolby Vision profile 5 or AVI sources are always transcoded. |
 | `scaling_mode` | [`ScalingMode`](#scalingmode) | `"scale_and_pad"` | 0.1.0 | How a source with a different aspect ratio fits `width` and `height`. |
 | `vaapi_device` | `string` |  | 0.1.0 | VAAPI render node. Unset uses `/dev/dri/renderD128`. |
 | `vaapi_driver` | [`VaapiDriver`](#vaapidriver) |  | 0.1.0 | VAAPI driver. Unset lets libva select the driver for `vaapi_device`. |
