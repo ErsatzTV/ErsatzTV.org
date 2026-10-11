@@ -1,7 +1,7 @@
 ---
 uid: configuration-frame-rate
 title: Frame Rate
-sidebar_position: 3
+sidebar_position: 2
 ---
 
 By default, ErsatzTV Next keeps each item's source frame rate, so the channel's frame rate changes whenever the source does. Some clients stutter or stop when the frame rate changes mid-stream, and graphics can look uneven when the content's rate changes underneath them.

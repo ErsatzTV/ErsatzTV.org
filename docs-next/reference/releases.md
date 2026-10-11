@@ -1,7 +1,7 @@
 ---
 uid: releases
 title: Releases
-sidebar_position: 4
+sidebar_position: 2
 ---
 
 ErsatzTV Next is published as versioned releases and as development builds. Published releases and builds never change: a version number always refers to the same files.
@@ -24,7 +24,7 @@ ersatztv --version
 
 ## Version Numbers
 
-Releases use [semantic versioning](https://semver.org). Before `1.0`, versions have the form `0.B.C`, the same rule as the [config versions](configuration/versions):
+Releases use [semantic versioning](https://semver.org). Before `1.0`, versions have the form `0.B.C`, the same rule as the [config versions](versions.md):
 
 - `B` changes with every breaking change, for example `0.2.3` to `0.3.0`.
 - `C` changes with every other release, whether it adds features or only fixes bugs, for example `0.2.3` to `0.2.4`.

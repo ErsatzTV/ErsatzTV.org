@@ -30,7 +30,7 @@ Versions have the form `0.B.C` (`B` for breaking, `C` for compatible):
 - `B` changes when the format changes in a way that older files can't be read correctly. ErsatzTV Next rejects a file whose `B` differs from its own.
 - `C` changes when the format gains new, optional properties. ErsatzTV Next loads any file with the same `B` and a `C` up to its own.
 
-A release of ErsatzTV Next that changes a config's `B` is itself a breaking release, and each release lists the config versions it reads. See [Releases](../releases).
+A release of ErsatzTV Next that changes a config's `B` is itself a breaking release, and each release lists the config versions it reads. See [Releases](releases.md).
 
 A file without a `version` is treated as `0.0.0`. A lineup without a version still loads. A channel config without a version is rejected, because the channel format is now `0.1.0`.
 
@@ -58,7 +58,7 @@ ErsatzTV (legacy) users with next engine channels: overlays in ErsatzTV's config
 Channel version `0.1.0` replaced the implicit "`"format": null` means copy" with an explicit `mode`:
 
 1. Set `"version": "https://ersatztv.org/channel/version/0.1.0"` in `channel.json` and in every overlay.
-2. Replace `"format": null` with `"mode": "copy"` in `normalization.audio` or `normalization.video`. Keep or add a `format` for items that can't be copied; see [Stream Copy](stream-copy).
+2. Replace `"format": null` with `"mode": "copy"` in `normalization.audio` or `normalization.video`. Keep or add a `format` for items that can't be copied; see [Stream Copy](../how-to/stream-copy.md).
 3. Remove `normalize_loudness: true` from audio that uses `"mode": "copy"`. ErsatzTV Next rejects that combination.
 
 `"format": null` in a base `channel.json` is now a load error. In an overlay, `null` removes the key from the merged config, so the default `format` (`h264` / `aac`) applies. It does not enable copy.

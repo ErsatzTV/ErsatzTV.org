@@ -1,7 +1,7 @@
 ---
 uid: configuration-stream-copy
 title: Stream Copy
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 By default, ErsatzTV Next transcodes every item, so every item has the same codec, resolution and audio layout. With stream copy, ErsatzTV Next passes the source video or audio through without re-encoding it. This uses much less CPU or GPU and keeps the source quality. In exchange, the output changes whenever the source does.

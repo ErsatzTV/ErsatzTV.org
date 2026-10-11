@@ -207,6 +207,38 @@ const config = {
             from: "/docs/scheduling/yaml",
             to: "/docs/scheduling/sequential",
           },
+          {
+            from: "/next-docs/introduction",
+            to: "/next-docs/tutorials",
+          },
+          {
+            from: "/next-docs/introduction/windows",
+            to: "/next-docs/tutorials/windows",
+          },
+          {
+            from: "/next-docs/configuration",
+            to: "/next-docs/how-to",
+          },
+          {
+            from: "/next-docs/configuration/stream-copy",
+            to: "/next-docs/how-to/stream-copy",
+          },
+          {
+            from: "/next-docs/configuration/frame-rate",
+            to: "/next-docs/how-to/frame-rate",
+          },
+          {
+            from: "/next-docs/configuration/scaling",
+            to: "/next-docs/how-to/scaling",
+          },
+          {
+            from: "/next-docs/configuration/versions",
+            to: "/next-docs/reference/versions",
+          },
+          {
+            from: "/next-docs/releases",
+            to: "/next-docs/reference/releases",
+          },
         ],
       } satisfies ClientRedirects.Options,
     ],

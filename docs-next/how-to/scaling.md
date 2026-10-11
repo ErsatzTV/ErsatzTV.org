@@ -1,7 +1,7 @@
 ---
 uid: configuration-scaling
 title: Scaling
-sidebar_position: 4
+sidebar_position: 3
 ---
 
 :::info[Added in v0.2.1]
