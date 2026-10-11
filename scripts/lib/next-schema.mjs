@@ -99,8 +99,10 @@ export function walk(schema, visit) {
 // A schema version URL, e.g. /channel/version/0.1.2. Every config file carries one in `version`.
 export const VERSION_PATH = /^\/(lineup|channel|playout)\/version\/(\d+\.\d+\.\d+)\/?$/;
 
-// Where a version URL leads. Until each kind has its own reference page, all go to the versions page.
-// eslint-disable-next-line no-unused-vars
+// kinds that have a reference page; the others lead to the versions page until theirs exists
+const REFERENCE_PAGES = new Set(["channel"]);
+
+// Where a version URL leads. `v` is for a banner that compares the file's version with the docs.
 export function versionTarget(kind, version) {
-  return "/next-docs/reference/versions";
+  return REFERENCE_PAGES.has(kind) ? `/next-docs/reference/${kind}?v=${version}` : "/next-docs/reference/versions";
 }
