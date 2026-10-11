@@ -25,6 +25,9 @@ import PeriodicTiming from './_generated/playout/PeriodicTiming.mdx';
 import GraphicsLayerKind from './_generated/playout/GraphicsLayerKind.mdx';
 import GraphicsLocation from './_generated/playout/GraphicsLocation.mdx';
 import PeriodicClock from './_generated/playout/PeriodicClock.mdx';
+import NextVersionBanner from '@site/src/components/NextVersionBanner';
+
+<NextVersionBanner kind="playout" />
 
 A playout file lists what a channel plays during one time window. The channel reads them from its playout folder
 ([`playout.folder`](./channel.mdx#playoutconfig) in `channel.json`) and loads the file that covers the current time.
@@ -32,6 +35,8 @@ Playouts are written by a scheduler, such as ErsatzTV (legacy).
 
 - Every playout file must have `version`. See [Config Versions](./versions.md).
 - Times are RFC 3339 with an offset, e.g. `2026-04-13T20:00:00.000-05:00`.
+- For validation and completion in an editor such as VS Code, set `$schema` to the JSON schema,
+  `https://ersatztv.org/schema/playout/0.0.6.json`. ErsatzTV Next ignores `$schema`.
 - **Since** is the first playout version with the property. A property marked *unreleased* is on `main` and not in a
   release yet.
 
