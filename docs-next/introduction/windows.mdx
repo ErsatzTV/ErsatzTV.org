@@ -7,11 +7,11 @@ toc_max_heading_level: 2
 
 # Getting Started with Windows
 
-This quickstart guide is designed to be straightforward and easy to follow. It guides you through the process of setting up ErsatzTV Next on Windows, including downloading the required tools, configuring the application, and starting the server.
+In this guide, you set up ErsatzTV Next on Windows, create a channel from a folder of your own videos, and watch it in a web browser.
 
 **To run ErsatzTV Next on Windows, you need the following tools:**
 
-<section className="container">
+<section className="container" style={{ marginBottom: "var(--ifm-leading)" }}>
   <div className="row" style={{ gap: "1rem" }}>
     <Card style={{ width: 300 }}>
       <CardHeader>ErsatzTV Next</CardHeader>
@@ -29,6 +29,10 @@ This quickstart guide is designed to be straightforward and easy to follow. It g
     </Card>
   </div>
 </section>
+
+:::warning
+Don't put the installation folder or the config folder in a folder that OneDrive syncs. On many PCs this includes `Desktop`, `Documents` and `Pictures`. ErsatzTV Next writes video segments into the config folder constantly while a channel plays, and OneDrive syncing breaks it. If OneDrive manages your `Documents` folder, use a folder like `C:\ErsatzTV` instead.
+:::
 
 ### Installation Folder
 
@@ -54,7 +58,7 @@ At this point, the config folder should be empty.
 
 ## Create a channel
 
-After preparing the installation folder creating the config folder, use the ErsatzTV Next CLI to create a channel.
+After preparing the installation folder and creating the config folder, use the ErsatzTV Next CLI to create a channel.
 
 Right click a blank area in the installation folder and select **Open in Terminal**. Paste the following command, replacing `Jason` with your Windows username, then press **[enter]**.
 
@@ -84,7 +88,7 @@ This command outputs the name of a generated file that tells the channel what co
 
 ## Start the server
 
-Start the ErsatzTV next server so clients can watch the channel.
+Start the ErsatzTV Next server so clients can watch the channel.
 
 ```powershell
 .\ersatztv.exe "C:\Users\Jason\Documents\ErsatzTV\lineup.json"
@@ -98,7 +102,7 @@ This command confirms that the channel loaded successfully. Windows may also pro
 
 You can now watch the channel using any compatible HLS player.
 
-For quick verification, you can use the following web-based plater, assuming the default configuration values have not been changed. The link is preconfigured to load the channel automatically.
+For quick verification, you can use the following web-based player, assuming the default configuration values have not been changed. The link is preconfigured to load the channel automatically.
 
 [hls.js demo](https://hlsjs.video-dev.org/demo/?src=http%3A%2F%2Flocalhost%3A8409%2Fchannel%2F1.m3u8)
 

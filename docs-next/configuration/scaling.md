@@ -4,6 +4,10 @@ title: Scaling
 sidebar_position: 4
 ---
 
+:::info[Added in v0.2.1]
+`flags` needs channel config `0.1.2`, which is not released yet. ErsatzTV Next v0.2.0 always uses `fast_bilinear`.
+:::
+
 ErsatzTV Next scales each item to the channel's resolution. When the scale runs in software (ffmpeg's `scale` filter), `normalization.video.filters.scale.flags` sets the scaling algorithm:
 
 ```json
