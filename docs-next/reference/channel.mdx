@@ -1,5 +1,5 @@
 ---
-title: channel.json
+title: Channel
 sidebar_position: 2
 description: Every property of the ErsatzTV Next channel config file.
 ---
@@ -63,85 +63,125 @@ points to it from `channels[].config`, and can merge overlays over it from `chan
 
 <ChannelConfig />
 
-## `playout` {#playoutconfig}
+## Playout {#playoutconfig}
+
+<div className="reference-path">`playout`</div>
 
 <PlayoutConfig />
 
-## `ffmpeg` {#ffmpegconfig}
+## FFmpeg {#ffmpegconfig}
+
+<div className="reference-path">`ffmpeg`</div>
 
 <FfmpegConfig />
 
-## `fallback` {#fallbackconfig}
+## Fallback {#fallbackconfig}
+
+<div className="reference-path">`fallback`</div>
 
 <FallbackConfig />
 
-## `normalization` {#normalizationconfig}
+## Normalization {#normalizationconfig}
+
+<div className="reference-path">`normalization`</div>
 
 <NormalizationConfig />
 
-### `normalization.audio` {#audionormalizationconfig}
+### Audio normalization {#audionormalizationconfig}
+
+<div className="reference-path">`normalization.audio`</div>
 
 <AudioNormalizationConfig />
 
-#### `normalization.audio.loudness` {#audioloudnessconfig}
+#### Loudness {#audioloudnessconfig}
+
+<div className="reference-path">`normalization.audio.loudness`</div>
 
 <AudioLoudnessConfig />
 
-### `normalization.video` {#videonormalizationconfig}
+### Video normalization {#videonormalizationconfig}
+
+<div className="reference-path">`normalization.video`</div>
 
 <VideoNormalizationConfig />
 
-#### `normalization.video.filters` {#videofilteroptionsconfig}
+#### Video filters {#videofilteroptionsconfig}
+
+<div className="reference-path">`normalization.video.filters`</div>
 
 Each filter has one option block. A value must contain only a-z, 0-9, `_`, `.`, `+` and `-`.
 
 <VideoFilterOptionsConfig />
 
-##### `filters.bwdif` {#bwdifoptions}
+##### `bwdif` {#bwdifoptions}
+
+<div className="reference-path">`normalization.video.filters.bwdif`</div>
 
 <BwdifOptions />
 
-##### `filters.bwdif_cuda` {#bwdifcudaoptions}
+##### `bwdif_cuda` {#bwdifcudaoptions}
+
+<div className="reference-path">`normalization.video.filters.bwdif_cuda`</div>
 
 <BwdifCudaOptions />
 
-##### `filters.deinterlace_qsv` {#deinterlaceqsvoptions}
+##### `deinterlace_qsv` {#deinterlaceqsvoptions}
+
+<div className="reference-path">`normalization.video.filters.deinterlace_qsv`</div>
 
 <DeinterlaceQsvOptions />
 
-##### `filters.deinterlace_vaapi` {#deinterlacevaapioptions}
+##### `deinterlace_vaapi` {#deinterlacevaapioptions}
+
+<div className="reference-path">`normalization.video.filters.deinterlace_vaapi`</div>
 
 <DeinterlaceVaapiOptions />
 
-##### `filters.libplacebo` {#libplacebooptions}
+##### `libplacebo` {#libplacebooptions}
+
+<div className="reference-path">`normalization.video.filters.libplacebo`</div>
 
 <LibplaceboOptions />
 
-##### `filters.scale` {#scaleoptions}
+##### `scale` {#scaleoptions}
+
+<div className="reference-path">`normalization.video.filters.scale`</div>
 
 <ScaleOptions />
 
-##### `filters.tonemap` {#tonemapoptions}
+##### `tonemap` {#tonemapoptions}
+
+<div className="reference-path">`normalization.video.filters.tonemap`</div>
 
 <TonemapOptions />
 
-##### `filters.tonemap_opencl` {#tonemapopencloptions}
+##### `tonemap_opencl` {#tonemapopencloptions}
+
+<div className="reference-path">`normalization.video.filters.tonemap_opencl`</div>
 
 <TonemapOpenclOptions />
 
-##### `filters.w3fdif` {#w3fdifoptions}
+##### `w3fdif` {#w3fdifoptions}
+
+<div className="reference-path">`normalization.video.filters.w3fdif`</div>
 
 <W3fdifOptions />
 
-##### `filters.yadif` {#yadifoptions}
+##### `yadif` {#yadifoptions}
+
+<div className="reference-path">`normalization.video.filters.yadif`</div>
 
 <YadifOptions />
 
-##### `filters.yadif_cuda` {#yadifcudaoptions}
+##### `yadif_cuda` {#yadifcudaoptions}
+
+<div className="reference-path">`normalization.video.filters.yadif_cuda`</div>
 
 <YadifCudaOptions />
 
-### `normalization.subtitle` {#subtitlenormalizationconfig}
+### Subtitle normalization {#subtitlenormalizationconfig}
+
+<div className="reference-path">`normalization.subtitle`</div>
 
 <SubtitleNormalizationConfig />
 
@@ -149,34 +189,34 @@ Each filter has one option block. A value must contain only a-z, 0-9, `_`, `.`, 
 
 The allowed values for properties that take a fixed set of strings.
 
-### `StreamMode` {#streammode}
+### Stream mode {#streammode}
 
 <StreamMode />
 
-### `AudioFormat` {#audioformat}
+### Audio format {#audioformat}
 
 <AudioFormat />
 
-### `AudioCopyFormat` {#audiocopyformat}
+### Audio copy format {#audiocopyformat}
 
 <AudioCopyFormat />
 
-### `VideoFormat` {#videoformat}
+### Video format {#videoformat}
 
 <VideoFormat />
 
-### `ScalingMode` {#scalingmode}
+### Scaling mode {#scalingmode}
 
 <ScalingMode />
 
-### `HardwareAccel` {#hardwareaccel}
+### Hardware acceleration {#hardwareaccel}
 
 <HardwareAccel />
 
-### `VaapiDriver` {#vaapidriver}
+### VAAPI driver {#vaapidriver}
 
 <VaapiDriver />
 
-### `SubtitleMode` {#subtitlemode}
+### Subtitle mode {#subtitlemode}
 
 <SubtitleMode />
