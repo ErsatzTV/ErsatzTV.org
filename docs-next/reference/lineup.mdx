@@ -1,0 +1,51 @@
+---
+title: lineup.json
+sidebar_position: 1
+description: Every property of the ErsatzTV Next lineup file.
+---
+
+import LineupConfig from './_generated/lineup/LineupConfig.mdx';
+import ServerConfig from './_generated/lineup/ServerConfig.mdx';
+import OutputConfig from './_generated/lineup/OutputConfig.mdx';
+import XmltvConfig from './_generated/lineup/XmltvConfig.mdx';
+import ChannelConfig from './_generated/lineup/ChannelConfig.mdx';
+
+The lineup is the file `ersatztv` runs: `ersatztv <lineup.json>`. It sets the HTTP server, where channels write their
+HLS output, and which channels exist. `ersatztv add-lineup` creates one, and `ersatztv add-channel` adds channels to it.
+
+- A relative path is relative to the lineup file.
+- `version` is the format version of the file. See [Config Versions](./versions.md).
+- **Since** is the first lineup version with the property. A property marked *unreleased* is on `main` and not in a
+  release yet.
+
+```json
+{
+  "version": "https://ersatztv.org/lineup/version/0.0.1",
+  "output": { "folder": "./hls" },
+  "channels": [
+    { "number": "1", "name": "Channel 1", "config": "./channels/1/channel.json" }
+  ]
+}
+```
+
+## Top level {#lineupconfig}
+
+<LineupConfig />
+
+## `server` {#serverconfig}
+
+<ServerConfig />
+
+## `output` {#outputconfig}
+
+<OutputConfig />
+
+## `xmltv` {#xmltvconfig}
+
+<XmltvConfig />
+
+## `channels[]` {#channelconfig}
+
+Each channel's settings are in its own [`channel.json`](./channel.mdx).
+
+<ChannelConfig />

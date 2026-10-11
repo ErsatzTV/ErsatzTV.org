@@ -8,6 +8,6 @@
 | `copy_formats` | array of [`AudioCopyFormat`](#audiocopyformat) |  | 0.1.0 | Source codecs to copy when `mode` is `copy`. Default: aac, ac3, eac3, mp3. |
 | `format` | [`AudioFormat`](#audioformat) | `"aac"` | 0.1.0 | Codec for transcoded items. When `mode` is `copy`, used only for items that are not copied. |
 | `loudness` | [`AudioLoudnessConfig`](#audioloudnessconfig) |  | 0.1.0 | Targets for `normalize_loudness`. |
-| `mode` | [`StreamMode`](#streammode) | `"transcode"` | 0.1.0 | `copy`: copy items with a source codec in `copy_formats`. Transcode all other items. |
+| `mode` | [`StreamMode`](#streammode) | `"transcode"` | 0.1.0 | Whether to transcode every item or copy items whose codec allows it. |
 | `normalize_loudness` | `boolean` | `false` | 0.1.0 | Normalize loudness with the ffmpeg `loudnorm` filter to the `loudness` targets. Not allowed when `mode` is `copy`. |
 | `sample_rate_hz` | `integer` |  | 0.1.0 | Sample rate in Hz, e.g. `48000`. Unset keeps the source rate, or 48000 when `normalize_loudness` is on. |

@@ -15,9 +15,9 @@ Every ErsatzTV Next config file declares the version of its format in a `version
 
 ## Current Versions
 
-- **Lineup**: `https://ersatztv.org/lineup/version/0.0.1`
-- **Channel**: `https://ersatztv.org/channel/version/0.1.2`
-- **Playout**: `https://ersatztv.org/playout/version/0.0.6`
+- **[Lineup](./lineup.mdx)**: `https://ersatztv.org/lineup/version/0.0.1`
+- **[Channel](./channel.mdx)**: `https://ersatztv.org/channel/version/0.1.2`
+- **[Playout](./playout.mdx)**: `https://ersatztv.org/playout/version/0.0.6`
 
 :::info[Added in v0.2.1]
 Channel `0.1.2` and playout `0.0.6` are not released yet. ErsatzTV Next v0.2.0 reads channel configs up to `0.1.1` and playouts up to `0.0.5`.
