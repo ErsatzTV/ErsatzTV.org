@@ -4,14 +4,18 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
+    "prestart": "npm run generate-next-reference",
     "start": "docusaurus start",
+    "prebuild": "npm run generate-next-reference",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids"
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "generate-next-reference": "node scripts/generate-next-reference.mjs",
+    "sync-next-schemas": "node scripts/sync-next-schemas.mjs"
   },
   "dependencies": {
     "@docusaurus/core": "^3.9.2",

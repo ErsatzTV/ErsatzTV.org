@@ -1,7 +1,7 @@
 ---
 uid: configuration-versions
 title: Config Versions
-sidebar_position: 1
+sidebar_position: 4
 ---
 
 Every ErsatzTV Next config file declares the version of its format in a `version` property. ErsatzTV Next checks the version when it loads the file, so a file written for a different format fails with a clear error instead of being misread.

@@ -26,6 +26,14 @@ jobs:
         run: |
           npm ci --no-audit
           npm run build
+      - name: Check generated reference is committed
+        run: |
+          generated="docs-next/reference/_generated static/lineup static/channel static/playout"
+          if [ -n "$(git status --porcelain -- $generated)" ]; then
+            git status --porcelain -- $generated
+            echo "::error::generated next reference is out of date; run npm run generate-next-reference and commit"
+            exit 1
+          fi
       - name: Upload artifact
         if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v5

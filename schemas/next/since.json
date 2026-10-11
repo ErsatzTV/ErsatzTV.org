@@ -1,0 +1,961 @@
+{
+  "source": {
+    "repository": "https://github.com/ErsatzTV/next",
+    "commit": "4b5174d2ef5b3a064ea9b8ea3a140757672d4233"
+  },
+  "schemas": {
+    "lineup": {
+      "file": "lineup_config.json",
+      "version": "0.0.1",
+      "versions": {
+        "0.0.1": {
+          "release": "v0.2.0"
+        }
+      },
+      "items": {
+        "ChannelConfig.config": {
+          "version": "0.0.0",
+          "release": "v0.2.0"
+        },
+        "ChannelConfig.group": {
+          "version": "0.0.0",
+          "release": "v0.2.0"
+        },
+        "ChannelConfig.logo": {
+          "version": "0.0.0",
+          "release": "v0.2.0"
+        },
+        "ChannelConfig.name": {
+          "version": "0.0.0",
+          "release": "v0.2.0"
+        },
+        "ChannelConfig.number": {
+          "version": "0.0.0",
+          "release": "v0.2.0"
+        },
+        "ChannelConfig.overlays": {
+          "version": "0.0.0",
+          "release": "v0.2.0"
+        },
+        "ChannelConfig.tvg_id": {
+          "version": "0.0.0",
+          "release": "v0.2.0"
+        },
+        "LineupConfig.channels": {
+          "version": "0.0.0",
+          "release": "v0.2.0"
+        },
+        "LineupConfig.output": {
+          "version": "0.0.0",
+          "release": "v0.2.0"
+        },
+        "LineupConfig.server": {
+          "version": "0.0.0",
+          "release": "v0.2.0"
+        },
+        "LineupConfig.version": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "LineupConfig.xmltv": {
+          "version": "0.0.0",
+          "release": "v0.2.0"
+        },
+        "OutputConfig.folder": {
+          "version": "0.0.0",
+          "release": "v0.2.0"
+        },
+        "ServerConfig.bind_address": {
+          "version": "0.0.0",
+          "release": "v0.2.0"
+        },
+        "ServerConfig.port": {
+          "version": "0.0.0",
+          "release": "v0.2.0"
+        },
+        "XmltvConfig.folder": {
+          "version": "0.0.0",
+          "release": "v0.2.0"
+        }
+      }
+    },
+    "channel": {
+      "file": "channel_config.json",
+      "version": "0.1.2",
+      "versions": {
+        "0.0.1": {
+          "release": "v0.2.0"
+        },
+        "0.1.0": {
+          "release": "v0.2.0"
+        },
+        "0.1.1": {
+          "release": "v0.2.0"
+        },
+        "0.1.2": {
+          "release": null
+        }
+      },
+      "items": {
+        "AudioCopyFormat=aac": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "AudioCopyFormat=ac3": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "AudioCopyFormat=eac3": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "AudioCopyFormat=mp2": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "AudioCopyFormat=mp3": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "AudioFormat=aac": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "AudioFormat=ac3": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "AudioLoudnessConfig.integrated_target": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "AudioLoudnessConfig.range_target": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "AudioLoudnessConfig.true_peak": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "AudioNormalizationConfig.bitrate_kbps": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "AudioNormalizationConfig.buffer_kbps": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "AudioNormalizationConfig.channels": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "AudioNormalizationConfig.copy_formats": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "AudioNormalizationConfig.format": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "AudioNormalizationConfig.loudness": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "AudioNormalizationConfig.mode": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "AudioNormalizationConfig.normalize_loudness": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "AudioNormalizationConfig.sample_rate_hz": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "BwdifCudaOptions.mode": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "BwdifOptions.mode": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "ChannelConfig.fallback": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "ChannelConfig.ffmpeg": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "ChannelConfig.normalization": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "ChannelConfig.playout": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "ChannelConfig.version": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "DeinterlaceQsvOptions.mode": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "DeinterlaceVaapiOptions.mode": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "FallbackConfig.duration_seconds": {
+          "version": "0.1.2",
+          "release": null
+        },
+        "FallbackConfig.show_error": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "FfmpegConfig.disabled_filters": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "FfmpegConfig.ffmpeg_path": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "FfmpegConfig.ffprobe_path": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "FfmpegConfig.preferred_filters": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "FfmpegConfig.reports_folder": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "HardwareAccel=amf": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "HardwareAccel=cuda": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "HardwareAccel=qsv": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "HardwareAccel=rkmpp": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "HardwareAccel=vaapi": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "HardwareAccel=videotoolbox": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "HardwareAccel=vulkan": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "LibplaceboOptions.tonemapping": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "NormalizationConfig.audio": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "NormalizationConfig.subtitle": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "NormalizationConfig.video": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "PlayoutConfig.folder": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "PlayoutConfig.virtual_start": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "ScaleOptions.flags": {
+          "version": "0.1.2",
+          "release": null
+        },
+        "ScalingMode=crop": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "ScalingMode=scale_and_pad": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "ScalingMode=stretch": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "StreamMode=copy": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "StreamMode=transcode": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "SubtitleMode=burn": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "SubtitleMode=convert": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "SubtitleNormalizationConfig.fonts_folder": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "SubtitleNormalizationConfig.force_style": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "SubtitleNormalizationConfig.mode": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "TonemapOpenclOptions.tonemap": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "TonemapOptions.tonemap": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "VaapiDriver=i965": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "VaapiDriver=ihd": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "VaapiDriver=radeonsi": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "VideoFilterOptionsConfig.bwdif": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "VideoFilterOptionsConfig.bwdif_cuda": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "VideoFilterOptionsConfig.deinterlace_qsv": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "VideoFilterOptionsConfig.deinterlace_vaapi": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "VideoFilterOptionsConfig.libplacebo": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "VideoFilterOptionsConfig.scale": {
+          "version": "0.1.2",
+          "release": null
+        },
+        "VideoFilterOptionsConfig.tonemap": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "VideoFilterOptionsConfig.tonemap_opencl": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "VideoFilterOptionsConfig.w3fdif": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "VideoFilterOptionsConfig.yadif": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "VideoFilterOptionsConfig.yadif_cuda": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "VideoFormat=h264": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "VideoFormat=hevc": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "VideoFormat=mpeg2video": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "VideoNormalizationConfig.accel": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "VideoNormalizationConfig.amf_device": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "VideoNormalizationConfig.bit_depth": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "VideoNormalizationConfig.bitrate_kbps": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "VideoNormalizationConfig.buffer_kbps": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "VideoNormalizationConfig.copy_formats": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "VideoNormalizationConfig.deinterlace": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "VideoNormalizationConfig.filters": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "VideoNormalizationConfig.format": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "VideoNormalizationConfig.frame_rate": {
+          "version": "0.1.1",
+          "release": "v0.2.0"
+        },
+        "VideoNormalizationConfig.height": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "VideoNormalizationConfig.mode": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "VideoNormalizationConfig.scaling_mode": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "VideoNormalizationConfig.vaapi_device": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "VideoNormalizationConfig.vaapi_driver": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "VideoNormalizationConfig.width": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "W3fdifOptions.mode": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "YadifCudaOptions.mode": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        },
+        "YadifOptions.mode": {
+          "version": "0.1.0",
+          "release": "v0.2.0"
+        }
+      }
+    },
+    "playout": {
+      "file": "playout.json",
+      "version": "0.0.6",
+      "versions": {
+        "0.0.1": {
+          "release": "v0.2.0"
+        },
+        "0.0.2": {
+          "release": "v0.2.0"
+        },
+        "0.0.3": {
+          "release": "v0.2.0"
+        },
+        "0.0.4": {
+          "release": "v0.2.0"
+        },
+        "0.0.5": {
+          "release": "v0.2.0"
+        },
+        "0.0.6": {
+          "release": null
+        }
+      },
+      "items": {
+        "AudioHint.channels": {
+          "version": "0.0.2",
+          "release": "v0.2.0"
+        },
+        "AudioHint.codec": {
+          "version": "0.0.2",
+          "release": "v0.2.0"
+        },
+        "AudioHint.stream_index": {
+          "version": "0.0.2",
+          "release": "v0.2.0"
+        },
+        "DynamicSource.headers": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "DynamicSource.retry_backoff_ms": {
+          "version": "0.0.6",
+          "release": null
+        },
+        "DynamicSource.retry_budget_ms": {
+          "version": "0.0.6",
+          "release": null
+        },
+        "DynamicSource.source_type": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "DynamicSource.timeout_us": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "DynamicSource.uri": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "DynamicSource.user_agent": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "GraphicsLayer.horizontal_margin_percent": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "GraphicsLayer.kind": {
+          "version": "0.0.4",
+          "release": "v0.2.0"
+        },
+        "GraphicsLayer.location": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "GraphicsLayer.opacity_percent": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "GraphicsLayer.source": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "GraphicsLayer.stream_index": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "GraphicsLayer.timing": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "GraphicsLayer.vertical_margin_percent": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "GraphicsLayer.width_percent": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "GraphicsLayer.within_source_content": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "GraphicsLayerKind=canvas": {
+          "version": "0.0.4",
+          "release": "v0.2.0"
+        },
+        "GraphicsLayerKind=media": {
+          "version": "0.0.4",
+          "release": "v0.2.0"
+        },
+        "GraphicsLocation=bottom_center": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "GraphicsLocation=bottom_left": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "GraphicsLocation=bottom_right": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "GraphicsLocation=center": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "GraphicsLocation=center_left": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "GraphicsLocation=center_right": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "GraphicsLocation=top_center": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "GraphicsLocation=top_left": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "GraphicsLocation=top_right": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "HttpSource.headers": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "HttpSource.in_point_ms": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "HttpSource.is_live": {
+          "version": "0.0.2",
+          "release": "v0.2.0"
+        },
+        "HttpSource.keep_alive": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "HttpSource.out_point_ms": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "HttpSource.probe_hint": {
+          "version": "0.0.2",
+          "release": "v0.2.0"
+        },
+        "HttpSource.reconnect": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "HttpSource.reconnect_delay_max": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "HttpSource.source_type": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "HttpSource.timeout_us": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "HttpSource.uri": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "HttpSource.user_agent": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "LavfiSource.params": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "LavfiSource.probe_hint": {
+          "version": "0.0.2",
+          "release": "v0.2.0"
+        },
+        "LavfiSource.source_type": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "LocalSource.in_point_ms": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "LocalSource.out_point_ms": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "LocalSource.path": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "LocalSource.probe_hint": {
+          "version": "0.0.2",
+          "release": "v0.2.0"
+        },
+        "LocalSource.source_type": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "PeriodicClock=content": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "PeriodicClock=wall": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "PeriodicTiming.clock": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "PeriodicTiming.disable_after_ms": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "PeriodicTiming.fade_ms": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "PeriodicTiming.frequency_ms": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "PeriodicTiming.hold_ms": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "PeriodicTiming.phase_offset_ms": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "PeriodicTiming.timing_type": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "Playout.items": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "Playout.version": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "PlayoutItem.finish": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "PlayoutItem.graphics": {
+          "version": "0.0.3",
+          "release": "v0.2.0"
+        },
+        "PlayoutItem.id": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "PlayoutItem.source": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "PlayoutItem.start": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "PlayoutItem.tracks": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "PlayoutItem.watermark": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "PlayoutItemTracks.audio": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "PlayoutItemTracks.subtitle": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "PlayoutItemTracks.video": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "ProbeHint.audio": {
+          "version": "0.0.2",
+          "release": "v0.2.0"
+        },
+        "ProbeHint.duration_ms": {
+          "version": "0.0.2",
+          "release": "v0.2.0"
+        },
+        "ProbeHint.format_name": {
+          "version": "0.0.2",
+          "release": "v0.2.0"
+        },
+        "ProbeHint.subtitle": {
+          "version": "0.0.2",
+          "release": "v0.2.0"
+        },
+        "ProbeHint.video": {
+          "version": "0.0.2",
+          "release": "v0.2.0"
+        },
+        "RtspSource.probe_hint": {
+          "version": "0.0.2",
+          "release": "v0.2.0"
+        },
+        "RtspSource.source_type": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "RtspSource.timeout_us": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "RtspSource.uri": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "ScriptSource.args": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "ScriptSource.command": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "ScriptSource.is_live": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "ScriptSource.probe_hint": {
+          "version": "0.0.2",
+          "release": "v0.2.0"
+        },
+        "ScriptSource.source_type": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "SubtitleHint.codec": {
+          "version": "0.0.2",
+          "release": "v0.2.0"
+        },
+        "SubtitleHint.stream_index": {
+          "version": "0.0.2",
+          "release": "v0.2.0"
+        },
+        "TrackSelection.source": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "TrackSelection.stream_index": {
+          "version": "0.0.1",
+          "release": "v0.2.0"
+        },
+        "VideoHint.codec": {
+          "version": "0.0.2",
+          "release": "v0.2.0"
+        },
+        "VideoHint.color_primaries": {
+          "version": "0.0.2",
+          "release": "v0.2.0"
+        },
+        "VideoHint.color_range": {
+          "version": "0.0.2",
+          "release": "v0.2.0"
+        },
+        "VideoHint.color_space": {
+          "version": "0.0.2",
+          "release": "v0.2.0"
+        },
+        "VideoHint.color_transfer": {
+          "version": "0.0.2",
+          "release": "v0.2.0"
+        },
+        "VideoHint.display_aspect_ratio": {
+          "version": "0.0.2",
+          "release": "v0.2.0"
+        },
+        "VideoHint.dv_profile": {
+          "version": "0.0.2",
+          "release": "v0.2.0"
+        },
+        "VideoHint.field_order": {
+          "version": "0.0.2",
+          "release": "v0.2.0"
+        },
+        "VideoHint.frame_rate": {
+          "version": "0.0.2",
+          "release": "v0.2.0"
+        },
+        "VideoHint.has_hdr10_metadata": {
+          "version": "0.0.3",
+          "release": "v0.2.0"
+        },
+        "VideoHint.height": {
+          "version": "0.0.2",
+          "release": "v0.2.0"
+        },
+        "VideoHint.pix_fmt": {
+          "version": "0.0.2",
+          "release": "v0.2.0"
+        },
+        "VideoHint.profile": {
+          "version": "0.0.2",
+          "release": "v0.2.0"
+        },
+        "VideoHint.rotation": {
+          "version": "0.0.5",
+          "release": "v0.2.0"
+        },
+        "VideoHint.rotation=0": {
+          "version": "0.0.5",
+          "release": "v0.2.0"
+        },
+        "VideoHint.rotation=180": {
+          "version": "0.0.5",
+          "release": "v0.2.0"
+        },
+        "VideoHint.rotation=270": {
+          "version": "0.0.5",
+          "release": "v0.2.0"
+        },
+        "VideoHint.rotation=90": {
+          "version": "0.0.5",
+          "release": "v0.2.0"
+        },
+        "VideoHint.sample_aspect_ratio": {
+          "version": "0.0.2",
+          "release": "v0.2.0"
+        },
+        "VideoHint.stream_index": {
+          "version": "0.0.2",
+          "release": "v0.2.0"
+        },
+        "VideoHint.width": {
+          "version": "0.0.2",
+          "release": "v0.2.0"
+        }
+      }
+    }
+  }
+}

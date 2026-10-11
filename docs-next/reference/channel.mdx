@@ -1,0 +1,177 @@
+---
+title: channel.json
+sidebar_position: 2
+description: Every property of the ErsatzTV Next channel config file.
+---
+
+import ChannelConfig from './_generated/channel/ChannelConfig.mdx';
+import PlayoutConfig from './_generated/channel/PlayoutConfig.mdx';
+import FfmpegConfig from './_generated/channel/FfmpegConfig.mdx';
+import FallbackConfig from './_generated/channel/FallbackConfig.mdx';
+import NormalizationConfig from './_generated/channel/NormalizationConfig.mdx';
+import AudioNormalizationConfig from './_generated/channel/AudioNormalizationConfig.mdx';
+import AudioLoudnessConfig from './_generated/channel/AudioLoudnessConfig.mdx';
+import VideoNormalizationConfig from './_generated/channel/VideoNormalizationConfig.mdx';
+import VideoFilterOptionsConfig from './_generated/channel/VideoFilterOptionsConfig.mdx';
+import BwdifOptions from './_generated/channel/BwdifOptions.mdx';
+import BwdifCudaOptions from './_generated/channel/BwdifCudaOptions.mdx';
+import DeinterlaceQsvOptions from './_generated/channel/DeinterlaceQsvOptions.mdx';
+import DeinterlaceVaapiOptions from './_generated/channel/DeinterlaceVaapiOptions.mdx';
+import LibplaceboOptions from './_generated/channel/LibplaceboOptions.mdx';
+import ScaleOptions from './_generated/channel/ScaleOptions.mdx';
+import TonemapOptions from './_generated/channel/TonemapOptions.mdx';
+import TonemapOpenclOptions from './_generated/channel/TonemapOpenclOptions.mdx';
+import W3fdifOptions from './_generated/channel/W3fdifOptions.mdx';
+import YadifOptions from './_generated/channel/YadifOptions.mdx';
+import YadifCudaOptions from './_generated/channel/YadifCudaOptions.mdx';
+import SubtitleNormalizationConfig from './_generated/channel/SubtitleNormalizationConfig.mdx';
+import StreamMode from './_generated/channel/StreamMode.mdx';
+import AudioFormat from './_generated/channel/AudioFormat.mdx';
+import AudioCopyFormat from './_generated/channel/AudioCopyFormat.mdx';
+import VideoFormat from './_generated/channel/VideoFormat.mdx';
+import ScalingMode from './_generated/channel/ScalingMode.mdx';
+import HardwareAccel from './_generated/channel/HardwareAccel.mdx';
+import VaapiDriver from './_generated/channel/VaapiDriver.mdx';
+import SubtitleMode from './_generated/channel/SubtitleMode.mdx';
+
+A channel config sets where a channel's playout is, which ffmpeg it uses, and the format of its output. The lineup
+points to it from `channels[].config`, and can merge overlays over it from `channels[].overlays`.
+
+- A relative path is relative to the file that sets it (the channel config or an overlay).
+- `version` is the format version of the file. See [Config Versions](./versions.md).
+- **Since** is the first channel config version with the property. A property marked *unreleased* is on `main` and
+  not in a release yet.
+
+```json
+{
+  "version": "https://ersatztv.org/channel/version/0.1.2",
+  "playout": { "folder": "./playout" },
+  "ffmpeg": {},
+  "normalization": {
+    "audio": { "format": "aac", "bitrate_kbps": 192, "channels": 2 },
+    "video": { "format": "h264", "width": 1920, "height": 1080, "bitrate_kbps": 4000 }
+  }
+}
+```
+
+## Top level {#channelconfig}
+
+<ChannelConfig />
+
+## `playout` {#playoutconfig}
+
+<PlayoutConfig />
+
+## `ffmpeg` {#ffmpegconfig}
+
+<FfmpegConfig />
+
+## `fallback` {#fallbackconfig}
+
+<FallbackConfig />
+
+## `normalization` {#normalizationconfig}
+
+<NormalizationConfig />
+
+### `normalization.audio` {#audionormalizationconfig}
+
+<AudioNormalizationConfig />
+
+#### `normalization.audio.loudness` {#audioloudnessconfig}
+
+<AudioLoudnessConfig />
+
+### `normalization.video` {#videonormalizationconfig}
+
+<VideoNormalizationConfig />
+
+#### `normalization.video.filters` {#videofilteroptionsconfig}
+
+Each filter has one option block. A value must contain only a-z, 0-9, `_`, `.`, `+` and `-`.
+
+<VideoFilterOptionsConfig />
+
+##### `filters.bwdif` {#bwdifoptions}
+
+<BwdifOptions />
+
+##### `filters.bwdif_cuda` {#bwdifcudaoptions}
+
+<BwdifCudaOptions />
+
+##### `filters.deinterlace_qsv` {#deinterlaceqsvoptions}
+
+<DeinterlaceQsvOptions />
+
+##### `filters.deinterlace_vaapi` {#deinterlacevaapioptions}
+
+<DeinterlaceVaapiOptions />
+
+##### `filters.libplacebo` {#libplacebooptions}
+
+<LibplaceboOptions />
+
+##### `filters.scale` {#scaleoptions}
+
+<ScaleOptions />
+
+##### `filters.tonemap` {#tonemapoptions}
+
+<TonemapOptions />
+
+##### `filters.tonemap_opencl` {#tonemapopencloptions}
+
+<TonemapOpenclOptions />
+
+##### `filters.w3fdif` {#w3fdifoptions}
+
+<W3fdifOptions />
+
+##### `filters.yadif` {#yadifoptions}
+
+<YadifOptions />
+
+##### `filters.yadif_cuda` {#yadifcudaoptions}
+
+<YadifCudaOptions />
+
+### `normalization.subtitle` {#subtitlenormalizationconfig}
+
+<SubtitleNormalizationConfig />
+
+## Values
+
+The allowed values for properties that take a fixed set of strings.
+
+### `StreamMode` {#streammode}
+
+<StreamMode />
+
+### `AudioFormat` {#audioformat}
+
+<AudioFormat />
+
+### `AudioCopyFormat` {#audiocopyformat}
+
+<AudioCopyFormat />
+
+### `VideoFormat` {#videoformat}
+
+<VideoFormat />
+
+### `ScalingMode` {#scalingmode}
+
+<ScalingMode />
+
+### `HardwareAccel` {#hardwareaccel}
+
+<HardwareAccel />
+
+### `VaapiDriver` {#vaapidriver}
+
+<VaapiDriver />
+
+### `SubtitleMode` {#subtitlemode}
+
+<SubtitleMode />

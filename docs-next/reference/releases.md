@@ -1,7 +1,7 @@
 ---
 uid: releases
 title: Releases
-sidebar_position: 2
+sidebar_position: 5
 ---
 
 ErsatzTV Next is published as versioned releases and as development builds. Published releases and builds never change: a version number always refers to the same files.
