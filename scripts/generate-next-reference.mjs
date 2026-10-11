@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // Generates MDX partials for the ErsatzTV Next reference from schemas/next/ (see sync-next-schemas.mjs),
-// and a redirect page for every known schema version URL (static/{kind}/version/{x.y.z}/index.html).
+// a redirect page for every known schema version URL (static/{kind}/version/{x.y.z}/index.html), and
+// _generated/versions.json with the current and known versions of each kind.
 //
 // Usage: node scripts/generate-next-reference.mjs
 //
@@ -172,6 +173,14 @@ function versionPage(kind, version) {
 </html>
 `;
 }
+
+// for src/components/NextVersionBanner, which compares a file's version with the docs
+const versions = {};
+for (const { kind } of KINDS) {
+  const { version, versions: known } = sinceFile.schemas[kind];
+  versions[kind] = { current: version, known: Object.keys(known) };
+}
+writeFileSync(join(outFolder, "versions.json"), JSON.stringify(versions, null, 2) + "\n");
 
 let pages = 0;
 for (const { kind } of KINDS) {

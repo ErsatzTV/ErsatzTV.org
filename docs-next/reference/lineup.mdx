@@ -9,12 +9,17 @@ import ServerConfig from './_generated/lineup/ServerConfig.mdx';
 import OutputConfig from './_generated/lineup/OutputConfig.mdx';
 import XmltvConfig from './_generated/lineup/XmltvConfig.mdx';
 import ChannelConfig from './_generated/lineup/ChannelConfig.mdx';
+import NextVersionBanner from '@site/src/components/NextVersionBanner';
+
+<NextVersionBanner kind="lineup" />
 
 The lineup is the file `ersatztv` runs: `ersatztv <lineup.json>`. It sets the HTTP server, where channels write their
 HLS output, and which channels exist. `ersatztv add-lineup` creates one, and `ersatztv add-channel` adds channels to it.
 
 - A relative path is relative to the lineup file.
 - `version` is the format version of the file. See [Config Versions](./versions.md).
+- For validation and completion in an editor such as VS Code, set `$schema` to the JSON schema,
+  `https://ersatztv.org/schema/lineup/0.0.1.json`. ErsatzTV Next ignores `$schema`.
 - **Since** is the first lineup version with the property. A property marked *unreleased* is on `main` and not in a
   release yet.
 

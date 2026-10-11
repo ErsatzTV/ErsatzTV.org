@@ -33,12 +33,17 @@ import ScalingMode from './_generated/channel/ScalingMode.mdx';
 import HardwareAccel from './_generated/channel/HardwareAccel.mdx';
 import VaapiDriver from './_generated/channel/VaapiDriver.mdx';
 import SubtitleMode from './_generated/channel/SubtitleMode.mdx';
+import NextVersionBanner from '@site/src/components/NextVersionBanner';
+
+<NextVersionBanner kind="channel" />
 
 A channel config sets where a channel's playout is, which ffmpeg it uses, and the format of its output. The lineup
 points to it from `channels[].config`, and can merge overlays over it from `channels[].overlays`.
 
 - A relative path is relative to the file that sets it (the channel config or an overlay).
 - `version` is the format version of the file. See [Config Versions](./versions.md).
+- For validation and completion in an editor such as VS Code, set `$schema` to the JSON schema,
+  `https://ersatztv.org/schema/channel/0.1.2.json`. ErsatzTV Next ignores `$schema`.
 - **Since** is the first channel config version with the property. A property marked *unreleased* is on `main` and
   not in a release yet.
 
