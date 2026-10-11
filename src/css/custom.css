@@ -36,3 +36,13 @@
 .flex-grow-1 {
   flex-grow: 1;
 }
+/* Exact config paths accompany the reference's readable section headings. */
+.reference-path {
+  margin-top: -.65rem;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-emphasis-700);
+  font-size: .85rem;
+  overflow-wrap: anywhere;
+}
+.reference-path code { background: none; border: 0; padding: 0; }
+.reference-path p { margin: 0; }

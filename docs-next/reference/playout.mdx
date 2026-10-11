@@ -58,71 +58,105 @@ Playouts are written by a scheduler, such as ErsatzTV (legacy).
 
 <Playout />
 
-## `items[]` {#playoutitem}
+## Item {#playoutitem}
+
+<div className="reference-path">`items[]`</div>
 
 <PlayoutItem />
 
-## `tracks` {#playoutitemtracks}
+## Tracks {#playoutitemtracks}
+
+<div className="reference-path">`items[].tracks`</div>
 
 <PlayoutItemTracks />
 
 ### Track selection {#trackselection}
 
+<div className="reference-path">`items[].tracks.video`, `items[].tracks.audio`, `items[].tracks.subtitle`</div>
+
 <TrackSelection />
 
-## Sources {#playoutitemsource}
+## Source {#playoutitemsource}
+
+<div className="reference-path">`items[].source`, `items[].tracks.*.source`, `items[].watermark.source`, `items[].graphics[].source`</div>
 
 <PlayoutItemSource />
 
-### `local` {#localsource}
+### Local files {#localsource}
+
+<div className="reference-path">`source_type: "local"`</div>
 
 <LocalSource />
 
-### `lavfi` {#lavfisource}
+### Lavfi {#lavfisource}
+
+<div className="reference-path">`source_type: "lavfi"`</div>
 
 <LavfiSource />
 
-### `http` {#httpsource}
+### HTTP {#httpsource}
+
+<div className="reference-path">`source_type: "http"`</div>
 
 <HttpSource />
 
-### `rtsp` {#rtspsource}
+### RTSP {#rtspsource}
+
+<div className="reference-path">`source_type: "rtsp"`</div>
 
 <RtspSource />
 
-### `script` {#scriptsource}
+### Script {#scriptsource}
+
+<div className="reference-path">`source_type: "script"`</div>
 
 <ScriptSource />
 
-### `dynamic` {#dynamicsource}
+### Dynamic {#dynamicsource}
+
+<div className="reference-path">`source_type: "dynamic"`</div>
 
 <DynamicSource />
 
-## Probe hints {#probehint}
+## Probe hint {#probehint}
+
+<div className="reference-path">`source.probe_hint`</div>
 
 <ProbeHint />
 
 ### Video hint {#videohint}
 
+<div className="reference-path">`source.probe_hint.video`</div>
+
 <VideoHint />
 
 ### Audio hint {#audiohint}
+
+<div className="reference-path">`source.probe_hint.audio`</div>
 
 <AudioHint />
 
 ### Subtitle hint {#subtitlehint}
 
+<div className="reference-path">`source.probe_hint.subtitle`</div>
+
 <SubtitleHint />
 
-## Graphics layers {#graphicslayer}
+## Graphics layer {#graphicslayer}
+
+<div className="reference-path">`items[].watermark`, `items[].graphics[]`</div>
 
 <GraphicsLayer />
 
 ### Timing {#graphicstiming}
 
+<div className="reference-path">`items[].watermark.timing`, `items[].graphics[].timing`</div>
+
 <GraphicsTiming />
 
-#### `periodic` {#periodictiming}
+#### Periodic timing {#periodictiming}
+
+<div className="reference-path">`timing_type: "periodic"`</div>
 
 <PeriodicTiming />
 
@@ -130,14 +164,14 @@ Playouts are written by a scheduler, such as ErsatzTV (legacy).
 
 The allowed values for properties that take a fixed set of strings.
 
-### `GraphicsLayerKind` {#graphicslayerkind}
+### Graphics layer kind {#graphicslayerkind}
 
 <GraphicsLayerKind />
 
-### `GraphicsLocation` {#graphicslocation}
+### Graphics location {#graphicslocation}
 
 <GraphicsLocation />
 
-### `PeriodicClock` {#periodicclock}
+### Periodic clock {#periodicclock}
 
 <PeriodicClock />
