@@ -139,8 +139,25 @@ function enumValues(n) {
   return null;
 }
 
+function renderFields(name, properties, required, since) {
+  let out = "";
+  for (const [property, p] of Object.entries(properties)) {
+    const entry = sinceEntry(since, `${name}.${property}`);
+    const defaultProp = p.default === undefined ? "" : ` defaultJson={${JSON.stringify(JSON.stringify(p.default))}}`;
+    out += `<ReferenceField name=${JSON.stringify(property)} type={<>${typeMarkup(p)}</>} since=${JSON.stringify(entry.version)}${entry.release ? "" : " unreleased"}${required.has(property) ? " required" : ""}${defaultProp}>\n\n`;
+    out += paragraph(p.description);
+    out += `</ReferenceField>\n\n`;
+  }
+  return out;
+}
+
+// an object variant written inline in a union rather than as its own definition
+const isInlineObject = (b) => !b.$ref && b.properties;
+
 function renderDefinition(name, n, since) {
-  const imports = n.properties ? 'import ReferenceField from "@site/src/components/ReferenceField";\n\n' : "";
+  const branches = (n.oneOf ?? n.anyOf ?? []).filter((b) => !isNull(b));
+  const hasFields = n.properties || branches.some(isInlineObject);
+  const imports = hasFields ? 'import ReferenceField from "@site/src/components/ReferenceField";\n\n' : "";
   let out = HEADER + "\n" + imports + paragraph(n.description);
 
   const values = enumValues(n);
@@ -156,19 +173,25 @@ function renderDefinition(name, n, since) {
   }
 
   if (n.properties) {
-    const required = new Set(n.required ?? []);
-    for (const [property, p] of Object.entries(n.properties)) {
-      const entry = sinceEntry(since, `${name}.${property}`);
-      const defaultProp = p.default === undefined ? "" : ` defaultJson={${JSON.stringify(JSON.stringify(p.default))}}`;
-      out += `<ReferenceField name=${JSON.stringify(property)} type={<>${typeMarkup(p)}</>} since=${JSON.stringify(entry.version)}${entry.release ? "" : " unreleased"}${required.has(property) ? " required" : ""}${defaultProp}>\n\n`;
-      out += paragraph(p.description);
-      out += `</ReferenceField>\n\n`;
+    return out + renderFields(name, n.properties, new Set(n.required ?? []), since);
+  }
+
+  // a union of inline objects, each tagged by a const property, e.g. a canvas layout `mode`
+  if (branches.length && branches.every(isInlineObject)) {
+    for (const branch of branches) {
+      const properties = { ...branch.properties };
+      const tag = Object.entries(properties).find(([, p]) => p.const !== undefined);
+      if (tag) {
+        const [property, p] = tag;
+        delete properties[property];
+        out += `**${code(`${property}: ${JSON.stringify(p.const)}`)}**\n\n` + paragraph(p.description);
+      }
+      out += renderFields(name, properties, new Set(branch.required ?? []), since);
     }
     return out;
   }
 
   // a union of definitions, e.g. a source or timing type
-  const branches = (n.oneOf ?? n.anyOf ?? []).filter((b) => !isNull(b));
   if (branches.length) {
     out += "One of:\n\n" + branches.map((b) => `- ${typeOf(b)}`).join("\n") + "\n";
     return out;

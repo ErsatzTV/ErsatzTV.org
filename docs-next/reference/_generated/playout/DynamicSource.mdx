@@ -41,13 +41,13 @@ Request timeout in microseconds. Defaults to 10 seconds. With retry enabled, eac
 
 </ReferenceField>
 
-<ReferenceField name="retry_budget_ms" type={<><code>{"integer"}</code></>} since="0.0.6" unreleased defaultJson={"0"}>
+<ReferenceField name="retry_budget_ms" type={<><code>{"integer"}</code></>} since="0.0.6" defaultJson={"0"}>
 
 Total time in milliseconds to spend resolving this source, including every attempt and the waits between them. Absent or 0 disables retry. Transport errors, timeouts and 5xx responses are retried; 4xx responses and a body that isn't a valid `PlayoutItem` are not. When resolution still fails, the channel plays its fallback for at least this long (see `fallback.duration_seconds` in the channel config). Retries delay the first segment when a channel starts while the resolver is unreachable.
 
 </ReferenceField>
 
-<ReferenceField name="retry_backoff_ms" type={<><code>{"integer"}</code></>} since="0.0.6" unreleased defaultJson={"250"}>
+<ReferenceField name="retry_backoff_ms" type={<><code>{"integer"}</code></>} since="0.0.6" defaultJson={"250"}>
 
 Delay in milliseconds before the first retry. Defaults to 250. The delay doubles after each retry, with jitter, and a retry is skipped when its delay would use up the budget.
 
