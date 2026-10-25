@@ -100,6 +100,13 @@ VAAPI driver. Unset lets libva select the driver for `vaapi_device`.
 
 </ReferenceField>
 
+<ReferenceField name="vaapi_low_power" type={<><a href="#vaapilowpower">{"VAAPI low power"}</a></>} since="0.1.3" unreleased defaultJson={"\"auto\""}>
+
+Whether VAAPI HEVC encoding may use the low-power entrypoint (Intel VDEnc) when the GPU also
+has the default one. Default `auto`.
+
+</ReferenceField>
+
 <ReferenceField name="width" type={<><code>{"integer"}</code></>} since="0.1.0">
 
 Width in pixels. Applies only when `height` is also set; otherwise the source size is kept.

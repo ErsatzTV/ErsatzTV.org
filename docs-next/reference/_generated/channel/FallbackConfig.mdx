@@ -5,7 +5,14 @@ import ReferenceField from "@site/src/components/ReferenceField";
 Controls the content that replaces scheduled content when there is nothing to play
 (a gap in the playout) or when the scheduled item fails
 
-<ReferenceField name="duration_seconds" type={<><code>{"integer"}</code></>} since="0.1.2" unreleased>
+<ReferenceField name="background_image" type={<><code>{"string"}</code></>} since="0.1.3" unreleased>
+
+Still image shown instead of black, scaled and padded to the output size. Black is used
+if the image fails to play.
+
+</ReferenceField>
+
+<ReferenceField name="duration_seconds" type={<><code>{"integer"}</code></>} since="0.1.2">
 
 Fallback length in seconds when the fallback has no end time, e.g. after a failed
 dynamic source. Default 60. Raised to the source's `retry_budget_ms` if shorter.
