@@ -5,6 +5,12 @@ import ReferenceField from "@site/src/components/ReferenceField";
 Settings for one channel: where its playout is, which ffmpeg to use, and the output format.
 A relative path in any of these settings is relative to the file that sets it.
 
+<ReferenceField name="cache" type={<><a href="#cacheconfig">{"Cache"}</a></>} since="0.1.5" unreleased defaultJson={"{}"}>
+
+Files rendered once and reused across items and channels.
+
+</ReferenceField>
+
 <ReferenceField name="fallback" type={<><a href="#fallbackconfig">{"Fallback"}</a></>} since="0.1.0" defaultJson={"{\"show_error\":false}"}>
 
 What plays when nothing is scheduled or an item fails.
@@ -26,6 +32,12 @@ Output format for audio, video and subtitles.
 <ReferenceField name="playout" type={<><a href="#playoutconfig">{"Playout"}</a></>} since="0.1.0" required>
 
 Where to find the channel's playout files.
+
+</ReferenceField>
+
+<ReferenceField name="session" type={<><a href="#sessionconfig">{"Session"}</a></>} since="0.1.4" unreleased defaultJson={"{}"}>
+
+When the channel is ready to serve and when it stops without viewers.
 
 </ReferenceField>
 

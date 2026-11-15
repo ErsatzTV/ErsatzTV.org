@@ -8,6 +8,8 @@ import ChannelConfig from './_generated/channel/ChannelConfig.mdx';
 import PlayoutConfig from './_generated/channel/PlayoutConfig.mdx';
 import FfmpegConfig from './_generated/channel/FfmpegConfig.mdx';
 import FallbackConfig from './_generated/channel/FallbackConfig.mdx';
+import SessionConfig from './_generated/channel/SessionConfig.mdx';
+import CacheConfig from './_generated/channel/CacheConfig.mdx';
 import NormalizationConfig from './_generated/channel/NormalizationConfig.mdx';
 import AudioNormalizationConfig from './_generated/channel/AudioNormalizationConfig.mdx';
 import AudioLoudnessConfig from './_generated/channel/AudioLoudnessConfig.mdx';
@@ -44,13 +46,13 @@ points to it from `channels[].config`, and can merge overlays over it from `chan
 - A relative path is relative to the file that sets it (the channel config or an overlay).
 - `version` is the format version of the file. See [Config Versions](./versions.md).
 - For validation and completion in an editor such as VS Code, set `$schema` to the JSON schema,
-  `https://ersatztv.org/schema/channel/0.1.2.json`. ErsatzTV Next ignores `$schema`.
+  `https://ersatztv.org/schema/channel/0.1.3.json`. ErsatzTV Next ignores `$schema`.
 - **Since** is the first channel config version with the property. A property marked *unreleased* is on `main` and
   not in a release yet.
 
 ```json
 {
-  "version": "https://ersatztv.org/channel/version/0.1.2",
+  "version": "https://ersatztv.org/channel/version/0.1.3",
   "playout": { "folder": "./playout" },
   "ffmpeg": {},
   "normalization": {
@@ -81,6 +83,18 @@ points to it from `channels[].config`, and can merge overlays over it from `chan
 <div className="reference-path">`fallback`</div>
 
 <FallbackConfig />
+
+## Session {#sessionconfig}
+
+<div className="reference-path">`session`</div>
+
+<SessionConfig />
+
+## Cache {#cacheconfig}
+
+<div className="reference-path">`cache`</div>
+
+<CacheConfig />
 
 ## Normalization {#normalizationconfig}
 
