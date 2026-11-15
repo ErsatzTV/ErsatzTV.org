@@ -17,3 +17,4 @@ For all clients, the **M3U** and/or the **XMLTV** urls are needed and can be cop
 - [TiviMate](/docs/clients/tivimate)
 - [Channels DVR Server](/docs/clients/channelsdvr)
 - [Kodi](/docs/clients/kodi)
+- [Aero](/docs/clients/aero)
