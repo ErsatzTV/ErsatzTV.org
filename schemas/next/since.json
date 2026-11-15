@@ -1,7 +1,7 @@
 {
   "source": {
     "repository": "https://github.com/ErsatzTV/next",
-    "commit": "c4b1e5b819e2dcb9b709a6e8fd3ff95bc00edbac"
+    "commit": "6c9e0cf733f6439cc4f2a5f8ad763b3a31518797"
   },
   "schemas": {
     "lineup": {
@@ -81,7 +81,7 @@
     },
     "channel": {
       "file": "channel_config.json",
-      "version": "0.1.3",
+      "version": "0.1.5",
       "versions": {
         "0.0.1": {
           "release": "v0.2.0"
@@ -96,6 +96,12 @@
           "release": "v0.2.1"
         },
         "0.1.3": {
+          "release": "v0.2.4"
+        },
+        "0.1.4": {
+          "release": null
+        },
+        "0.1.5": {
           "release": null
         }
       },
@@ -184,6 +190,18 @@
           "version": "0.1.0",
           "release": "v0.2.0"
         },
+        "CacheConfig.folder": {
+          "version": "0.1.5",
+          "release": null
+        },
+        "CacheConfig.max_unused_days": {
+          "version": "0.1.5",
+          "release": null
+        },
+        "ChannelConfig.cache": {
+          "version": "0.1.5",
+          "release": null
+        },
         "ChannelConfig.fallback": {
           "version": "0.1.0",
           "release": "v0.2.0"
@@ -200,6 +218,10 @@
           "version": "0.1.0",
           "release": "v0.2.0"
         },
+        "ChannelConfig.session": {
+          "version": "0.1.4",
+          "release": null
+        },
         "ChannelConfig.version": {
           "version": "0.1.0",
           "release": "v0.2.0"
@@ -214,7 +236,7 @@
         },
         "FallbackConfig.background_image": {
           "version": "0.1.3",
-          "release": null
+          "release": "v0.2.4"
         },
         "FallbackConfig.duration_seconds": {
           "version": "0.1.2",
@@ -312,6 +334,14 @@
           "version": "0.1.0",
           "release": "v0.2.0"
         },
+        "SessionConfig.idle_timeout_seconds": {
+          "version": "0.1.4",
+          "release": null
+        },
+        "SessionConfig.ready_segment_count": {
+          "version": "0.1.4",
+          "release": null
+        },
         "StreamMode=copy": {
           "version": "0.1.0",
           "release": "v0.2.0"
@@ -362,11 +392,11 @@
         },
         "VaapiLowPower=auto": {
           "version": "0.1.3",
-          "release": null
+          "release": "v0.2.4"
         },
         "VaapiLowPower=never": {
           "version": "0.1.3",
-          "release": null
+          "release": "v0.2.4"
         },
         "VideoFilterOptionsConfig.bwdif": {
           "version": "0.1.0",
@@ -486,7 +516,7 @@
         },
         "VideoNormalizationConfig.vaapi_low_power": {
           "version": "0.1.3",
-          "release": null
+          "release": "v0.2.4"
         },
         "VideoNormalizationConfig.width": {
           "version": "0.1.0",
@@ -508,7 +538,7 @@
     },
     "playout": {
       "file": "playout.json",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "versions": {
         "0.0.1": {
           "release": "v0.2.0"
@@ -530,6 +560,9 @@
         },
         "0.0.7": {
           "release": "v0.2.3"
+        },
+        "0.0.8": {
+          "release": "v0.2.5"
         }
       },
       "items": {
