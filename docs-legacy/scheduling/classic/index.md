@@ -1,4 +1,4 @@
----
+---type:movie AND release_date:197*
 uid: scheduling-classic-index
 title: Classic Schedules
 ---
