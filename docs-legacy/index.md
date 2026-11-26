@@ -20,3 +20,4 @@ Want to say thanks? Consider [sponsorship on GitHub](https://github.com/sponsors
 4. [Create Channels](/docs/channels)
 4. [Create Schedules](/docs/scheduling/classic)
 5. [Configure Clients](/docs/clients)
+https://archive.org/details/KGO_20261124_150000_Good_Morning_America/start/5755/end/5815?q=Gma
